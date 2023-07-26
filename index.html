@@ -90,6 +90,16 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+    .playlist-names {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+      padding: 10px;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
   </style>
 </head>
 <body>
@@ -100,6 +110,10 @@
     <div class="m3u8-url-box">
       <label for="m3u8-url">m3u8 URL:</label>
       <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
+    </div>
+    <div class="clock-section">
+      <h2></h2>
+      <p id="pdt-time"></p>
     </div>
 
     <div class="video-container">
@@ -142,10 +156,12 @@
     <ul id="playlist">
       <li data-src="https://wowza.hollywoodsign.org/hollywoodsignlower/lower.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg/800px-Hollywood_Sign_%28Zuschnitt%29.jpg" alt="Image 2">Hollywood Sign Cam 1 </li>
       <li data-src="https://wowza.hollywoodsign.org/hollywoodsignupper/upper.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/images/2022-12/hollywood-sign-behind.jpg?width=1920&fit=bound&quality=72&auto=webp" alt="Image 2">Hollywood Sign Cam 2</li>
+      <li data-src="https://wms-prod-3.wetmet.net/live/281-02-01/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDI6MDI6MzEgQU0maGFzaF92YWx1ZT1raUM2S0NpNHlOUFA5R3pMZ2hSS21RPT0mdmFsaWRtaW51dGVzPTMw" data-type="application/x-mpegURL"><img src="https://a.cdn-hotels.com/gdcs/production14/d1087/59523f11-21cb-4a60-8d14-c61ccac2da6e.jpg?impolicy=fcrop&w=800&h=533&q=medium" alt="Image 1">Santa Monica Beach Main Cam</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/santamonica_swellmagnet.stream/chunklist_w952119598.m3u8" data-type="application/x-mpegURL"><img src="https://media.cntraveler.com/photos/5a8db36a723a834885e1527b/16:9/w_2560,c_limit/Santa-Monica-State-Beach_GettyImages-579739546.jpg" alt="Image 1">Santa Monica Beach Cam 1</li>
       <li data-src="https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kcajbp1.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w728235556.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/business/santa-monica-pier/h_2000-crm-la-santa-monica-pier-81caa3e45056a36_81caaa5e-5056-a36f-236a20f47e02fec1.jpg" alt="Image 1">Santa Monica Pier Cam 1</li>
       <li data-src="https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kwpxbpv.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w2073378659.m3u8" data-type="application/x-mpegURL"><img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475898-Santa-Monica-Pier.jpg" alt="Image 1">Santa Monica Pier Cam 2</li>
       <li data-src="https://usw01-smr03-relay.ozolio.com/hls-live/_definst_/relay01.ikdybp6.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w1760431678.m3u8" data-type="application/x-mpegURL"><img src="https://images.squarespace-cdn.com/content/v1/5e0e65adcd39ed279a0402fd/1580441261028-2FW8URSB0H2G8BER9EJ2/vasile-tiplea-473079-unsplash.jpg" alt="Image 1">Santa Monica Pier Cam 3</li>
+      <li data-src="https://wms-prod-3.wetmet.net/live/281-03-01/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDE6NTI6MDMgQU0maGFzaF92YWx1ZT1FeTNrajJDTDYyMFFKTVF0RUVRMzlRPT0mdmFsaWRtaW51dGVzPTMw" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/_1FPTwinfL1Q7kT_rsWwxjJK10U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-511663288-5c8a79fcc9e77c0001ac17dd.jpg" alt="Image 1">LAX Airport Main Cam</li>
       <li data-src="https://s88.ipcamlive.com/streams/589ak7wrg6tr4bzhi/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s88.ipcamlive.com/streams/589ak7wrg6tr4bzhi/snapshot.jpg" alt="Image 1">LAX Airport Cam 1</li>
       <li data-src="https://s93.ipcamlive.com/streams/5d4jttrghcmpfblby/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s93.ipcamlive.com/streams/5d4jttrghcmpfblby/snapshot.jpg" alt="Image 1">LAX Airport Cam 2</li>
       <li data-src="https://s63.ipcamlive.com/streams/3fozlrfpma53bbxiu/stream.m3u8" data-type="application/x-mpegURL"><img src="https://media.istockphoto.com/id/1414094569/photo/skid-row.jpg?s=612x612&w=0&k=20&c=wc-uitCZtekoa6_mvaiHDe9paHHfVGzNOzAQMsb3rEU=" alt="Image 1">Skid Row Cam 1</li>
@@ -173,13 +189,14 @@
       <li data-src="https://edge06.nginx.hdontap.com/hosb5/etniesskatepark_clf.stream/chunklist_w350661697.m3u8" data-type="application/x-mpegURL"><img src="https://s3-us-west-1.amazonaws.com/west-coast-skateparks/skatepark_images/photos/000/000/623/original/lake_20forest-01.jpg?1459397429" alt="Image 1">Etnies Skatepark Cam</li>
       <li data-src="https://s65.ipcamlive.com/streams/41ooycyn4ew5mx6nu/stream.m3u8" data-type="application/x-mpegURL"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/81/47/e8/ventura-harbor-village.jpg?w=1200&h=1200&s=1" alt="Image 1">Ventura Harbor Cam</li>
       <li data-src="https://623bf6bf3ce68.streamlock.net:444/design1/design1.stream/chunklist_w1663802346.m3u8" data-type="application/x-mpegURL"><img src="https://www.malibucity.org/ImageRepository/Document?documentID=28112" alt="Image 1">69BRAVO LIVE STREAMING 360 Cam</li>
-      <li data-src="https://alto.boldlygoingnowhere.org/N/N.stream/chunks.m3u8?nimblesessionid=58689" data-type="application/x-mpegURL"><img src="https://lirp.cdn-website.com/e1d49cde/dms3rep/multi/opt/312610876-1920w.jpg" alt="Image 1">69BRAVO Live Cam 1</li>
-      <li data-src="https://alto.boldlygoingnowhere.org/E/E.stream/chunks.m3u8?nimblesessionid=58691" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccp3ohqSz_SUKUlN7KDbE0QFFDrC0D-0RQg&usqp=CAU" alt="Image 1">69BRAVO Live Cam 2</li>
-      <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/chunks.m3u8?nimblesessionid=58692" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/FCG2Jq8VEAIAtQc?format=jpg&name=large" alt="Image 1">69BRAVO Live Cam 3</li>
-      <li data-src="https://alto.boldlygoingnowhere.org/S/S.stream/chunks.m3u8?nimblesessionid=58690" data-type="application/x-mpegURL"><img src="https://i.vimeocdn.com/video/1360526561-d3501a49dbad318d027138b3a5e8cb209aff20298f14a296a1e700452b9b2939-d_640" alt="Image 1">69BRAVO Live Cam 4</li>
+      <li data-src="https://alto.boldlygoingnowhere.org/N/N.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://lirp.cdn-website.com/e1d49cde/dms3rep/multi/opt/312610876-1920w.jpg" alt="Image 1">69BRAVO Live Cam 1</li>
+      <li data-src="https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccp3ohqSz_SUKUlN7KDbE0QFFDrC0D-0RQg&usqp=CAU" alt="Image 1">69BRAVO Live Cam 2</li>
+      <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/FCG2Jq8VEAIAtQc?format=jpg&name=large" alt="Image 1">69BRAVO Live Cam 3</li>
+      <li data-src="https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://i.vimeocdn.com/video/1360526561-d3501a49dbad318d027138b3a5e8cb209aff20298f14a296a1e700452b9b2939-d_640" alt="Image 1">69BRAVO Live Cam 4</li>
 
 
   <!-- More playlist sections here... -->
+  
   
 
   <script>
@@ -229,4 +246,26 @@
   </script>
 </body>
 </html>
+<script>
+      function updatePDTTime() {
+      const now = new Date();
+      const options = {
+        timeZone: 'America/Los_Angeles',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true, // Set to true to display time in 12-hour format
+      };
+      const pdtTime = now.toLocaleString('en-US', options);
+      document.getElementById('pdt-time').textContent = `Los Angeles Time: ${pdtTime}`;
+    }
 
+    // Update the 12-hour format PDT time every minute (60000 ms)
+    setInterval(updatePDTTime, 60000);
+
+    // Initial update of the 12-hour format PDT time
+    updatePDTTime();
+  </script>
+</body>
+</html>
+<script>
+  
