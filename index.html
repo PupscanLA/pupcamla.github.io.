@@ -100,6 +100,11 @@
       max-height: 200px;
       overflow-y: auto;
     }
+        /* Apply this CSS to make the "sub-section-title" not clickable */
+        li.sub-section-title {
+      pointer-events: none;
+      /* Add any other styles you want for the non-clickable element */
+    }
   </style>
 </head>
 <body>
@@ -154,45 +159,54 @@
   <div class="playlist-section">
     <h2>Los Angeles Cams/Orange County</h2>
     <ul id="playlist">
+      <li class="sub-section-title">Los Angeles Views</li>
+      <li data-src="https://nbculocallive.akamaized.net/hls/live/2035368/national/stream1/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/20190616154621%21Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg" alt="Image 2">Los Angeles view Cam</li>
       <li data-src="https://wowza.hollywoodsign.org/hollywoodsignlower/lower.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg/800px-Hollywood_Sign_%28Zuschnitt%29.jpg" alt="Image 2">Hollywood Sign Cam 1 </li>
       <li data-src="https://wowza.hollywoodsign.org/hollywoodsignupper/upper.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/images/2022-12/hollywood-sign-behind.jpg?width=1920&fit=bound&quality=72&auto=webp" alt="Image 2">Hollywood Sign Cam 2</li>
-      <li data-src="https://wms-prod-3.wetmet.net/live/281-02-01/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDI6MDI6MzEgQU0maGFzaF92YWx1ZT1raUM2S0NpNHlOUFA5R3pMZ2hSS21RPT0mdmFsaWRtaW51dGVzPTMw" data-type="application/x-mpegURL"><img src="https://a.cdn-hotels.com/gdcs/production14/d1087/59523f11-21cb-4a60-8d14-c61ccac2da6e.jpg?impolicy=fcrop&w=800&h=533&q=medium" alt="Image 1">Santa Monica Beach Main Cam</li>
+      <li data-src="https://s63.ipcamlive.com/streams/3fozlrfpma53bbxiu/stream.m3u8" data-type="application/x-mpegURL"><img src="https://media.istockphoto.com/id/1414094569/photo/skid-row.jpg?s=612x612&w=0&k=20&c=wc-uitCZtekoa6_mvaiHDe9paHHfVGzNOzAQMsb3rEU=" alt="Image 1">Skid Row Cam 1</li>
+      <li data-src="https://s26.ipcamlive.com/streams/1aoybm6n4k8okveux/stream.m3u8" data-type="application/x-mpegURL"><img src="https://angelusnews.com/wp-content/uploads/2023/06/shutterstock_2230423279-scaled.jpg" alt="Image 1">Skid Row Cam 2</li>
+      <li data-src="https://s75.ipcamlive.com/streams/4bqturbleh2u6ak9f/stream.m3u8" data-type="application/x-mpegURL"><img src="https://images.squarespace-cdn.com/content/v1/5e14c8b15405a84a69becd50/1638391461015-SND666J7P855UB1M83H7/AdobeStock_264876288.jpg?format=2500w" alt="Image 1">Skid Row Cam 3</li>
+      <li class="sub-section-title">Beaches</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/santamonica_swellmagnet.stream/chunklist_w952119598.m3u8" data-type="application/x-mpegURL"><img src="https://media.cntraveler.com/photos/5a8db36a723a834885e1527b/16:9/w_2560,c_limit/Santa-Monica-State-Beach_GettyImages-579739546.jpg" alt="Image 1">Santa Monica Beach Cam 1</li>
       <li data-src="https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kcajbp1.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w728235556.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/business/santa-monica-pier/h_2000-crm-la-santa-monica-pier-81caa3e45056a36_81caaa5e-5056-a36f-236a20f47e02fec1.jpg" alt="Image 1">Santa Monica Pier Cam 1</li>
       <li data-src="https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kwpxbpv.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w2073378659.m3u8" data-type="application/x-mpegURL"><img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475898-Santa-Monica-Pier.jpg" alt="Image 1">Santa Monica Pier Cam 2</li>
       <li data-src="https://usw01-smr03-relay.ozolio.com/hls-live/_definst_/relay01.ikdybp6.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w1760431678.m3u8" data-type="application/x-mpegURL"><img src="https://images.squarespace-cdn.com/content/v1/5e0e65adcd39ed279a0402fd/1580441261028-2FW8URSB0H2G8BER9EJ2/vasile-tiplea-473079-unsplash.jpg" alt="Image 1">Santa Monica Pier Cam 3</li>
-      <li data-src="https://wms-prod-3.wetmet.net/live/281-03-01/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDE6NTI6MDMgQU0maGFzaF92YWx1ZT1FeTNrajJDTDYyMFFKTVF0RUVRMzlRPT0mdmFsaWRtaW51dGVzPTMw" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/_1FPTwinfL1Q7kT_rsWwxjJK10U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-511663288-5c8a79fcc9e77c0001ac17dd.jpg" alt="Image 1">LAX Airport Main Cam</li>
-      <li data-src="https://s88.ipcamlive.com/streams/589ak7wrg6tr4bzhi/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s88.ipcamlive.com/streams/589ak7wrg6tr4bzhi/snapshot.jpg" alt="Image 1">LAX Airport Cam 1</li>
-      <li data-src="https://s93.ipcamlive.com/streams/5d4jttrghcmpfblby/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s93.ipcamlive.com/streams/5d4jttrghcmpfblby/snapshot.jpg" alt="Image 1">LAX Airport Cam 2</li>
-      <li data-src="https://s63.ipcamlive.com/streams/3fozlrfpma53bbxiu/stream.m3u8" data-type="application/x-mpegURL"><img src="https://media.istockphoto.com/id/1414094569/photo/skid-row.jpg?s=612x612&w=0&k=20&c=wc-uitCZtekoa6_mvaiHDe9paHHfVGzNOzAQMsb3rEU=" alt="Image 1">Skid Row Cam 1</li>
-      <li data-src="https://s26.ipcamlive.com/streams/1aoybm6n4k8okveux/stream.m3u8" data-type="application/x-mpegURL"><img src="https://angelusnews.com/wp-content/uploads/2023/06/shutterstock_2230423279-scaled.jpg" alt="Image 1">Skid Row Cam 2</li>
-      <li data-src="https://s75.ipcamlive.com/streams/4bqturbleh2u6ak9f/stream.m3u8" data-type="application/x-mpegURL"><img src="https://images.squarespace-cdn.com/content/v1/5e14c8b15405a84a69becd50/1638391461015-SND666J7P855UB1M83H7/AdobeStock_264876288.jpg?format=2500w" alt="Image 1">Skid Row Cam 3</li>
       <li data-src="https://stream-us1-bravo.dropcam.com:443/nexus_aac/e9806cd6079e4eb0ba5302f2b0bf8930/playlist.m3u8?public=M5YAwFAdeV" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Beach_bikepath_in_the_Venice_Beach_park%2C_California.jpg" alt="Image 2">Venice Beach Cam 1</li>
       <li data-src="https://5ddd47d64e730.streamlock.net:444/westland/westland.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1000/public/VC_California101_VeniceBeach_Stock_RF_638340372_1280x640.jpg?itok=50tR-rTR" alt="Image 2">Venice Beach Cam 2</li>
       <li data-src="https://edge06.nginx.hdontap.com/hosb1/venice_swellmagnet.stream/chunklist_w221602299.m3u8" data-type="application/x-mpegURL"><img src="https://www.thebacklabel.com/wp-content/uploads/2013/11/venice-beach.jpg" alt="Image 2">Venice Beach Cam 3</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/innocean/innocean.stream/chunklist_w815118782.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2016/06/downtown-huntington-beach.jpg" alt="Image 2">Huntington Beach Overview</li>
-      <li data-src="https://nbculocallive.akamaized.net/hls/live/2035368/national/stream1/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/20190616154621%21Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg" alt="Image 2">Los Angeles view Cam</li>
+      <li data-src="https://cs7.pixelcaster.com/live/hbsouth.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_716,q_80,w_639/v1/clients/surfcityusa-redesign/Mike_Marshall_Pier_Sunset_2aac8d84-7bed-433c-bdce-3ecc7d6cfc43.jpg" alt="Image 2">Huntington Beach South Of pier</li>
+      <li data-src="https://cs7.pixelcaster.com/live/hbnorth.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/surfcityusa/DJI_0387_1__2a9cbdab-8c22-4a75-bc70-ff743394f11d.jpg" alt="Image 2">Huntington Beach North Of Pier</li>
+      <li data-src="https://cs7.pixelcaster.com/live/hbwest.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://media.california.com/media/_versions_jpg/articlecomponent/shutterstock_1042818232__1000x667____v1220x__.jpg" alt="Image 2">Huntington Beach Southwest View</li>
+      <li data-src="https://cs7.pixelcaster.com/live/hbeast.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://i0.wp.com/calmatters.org/wp-content/uploads/2022/06/030823-HUNTINGTON-BEACH-ISTOCK-CM.jpg?fit=2000%2C1333&ssl=1" alt="Image 2">Huntington Beach Northeast View</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/hdontap_lgbharbor_fixed.stream/chunklist_w1443208123.m3u8" data-type="application/x-mpegURL"><img src="https://img.rezdy.com/PRODUCT_IMAGE/22819/ch88_lg.jpg" alt="Image 2">Long Beach Harbor Live Webcam</li>
       <li data-src="https://edge06.nginx.hdontap.com/hosb1/sunset-static_swellmagenet.stream/chunklist_w1918080594.m3u8" data-type="application/x-mpegURL"><img src="https://swellmagnet.com/wp-content/uploads/2012/09/sunset-2.jpg" alt="Image 2">Malibu Break Point Surf Cam</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb5/swellmagnet_malibu-axis_fixed.stream/chunklist_w1247712797.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/MalibuAir.jpg/1200px-MalibuAir.jpg" alt="Image 2">Malibu Overview Cam</li>
+      <li data-src="https://s65.ipcamlive.com/streams/41ooycyn4ew5mx6nu/stream.m3u8" data-type="application/x-mpegURL"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/81/47/e8/ventura-harbor-village.jpg?w=1200&h=1200&s=1" alt="Image 1">Ventura Harbor Cam</li>
+      <li class="sub-section-title">Amusement Parks</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts2.stream/chunklist_w1507955537.m3u8" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/_5H-nke7fot6GN4hB3KMYWltc9g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KnottsBerryFarminCalifornia-8acc048bdf8744fd86ce3f905ad75ad6.jpg" alt="Image 2">Knotts Berry Farm Cam 1</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts1.stream/chunklist_w499315738.m3u8" data-type="application/x-mpegURL"><img src="https://employeenetwork.com/wp-content/uploads/2022/07/knottsdisplaypage2022.png" alt="Image 2">Knotts Berry Farm Cam 2</li>
-      <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-hecuba.stream/chunklist_w1296265921.m3u8" data-type="application/x-mpegURL"><img src="https://us.123rf.com/450wm/kitleong/kitleong1710/kitleong171000571/87088553-los-angeles-oct-8-afternoon-view-of-the-beautiful-hecuba-queen-of-troy-of-usc-village-on-oct-8.jpg?ver=6" alt="Image 2">USC Hecuba Cam</li>
-      <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-tommy.stream/chunklist_w215605669.m3u8" data-type="application/x-mpegURL"><img src="https://d3jycsk0m72ya7.cloudfront.net/images/2019/5/8/usc_trojan_tommy_trojan_statue.jpg" alt="Image 2">USC Tommy Cam</li>
-      <li data-src="https://video.parks.ca.gov/PoppyReserve/Poppies.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/California_Poppies1.jpg/1200px-California_Poppies1.jpg" alt="Image 2">Poppy Reserve Live</li>
+      <li class="sub-section-title">Doggy Day Cares</li>
       <li data-src="https://s79.ipcamlive.com/streams/4fik5oxgk07hydp1t/stream.m3u8" data-type="application/x-mpegURL"><img src="https://www.petrush.net/wp-content/uploads/photo-gallery/Pet-Rush-Inn-Play-Area-9.jpg?bwg=1601044841" alt="Image 2">Pet Rush Inn Cam 1</li>
       <li data-src="https://s80.ipcamlive.com/streams/50x8bh1ctrucbnq6t/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s79.ipcamlive.com/streams/4fik5oxgk07hydp1t/snapshot.jpg" alt="Image 2">Pet Rush Inn Cam 2</li>
       <li data-src="https://s103.ipcamlive.com/streams/67haszwkarc8johyb/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s103.ipcamlive.com/streams/67haszwkarc8johyb/snapshot.jpg" alt="Image 2">Pet Rush Inn Cam 3</li>
       <li data-src="https://s103.ipcamlive.com/streams/67eecu0lbjwtpavzl/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s103.ipcamlive.com/streams/67eecu0lbjwtpavzl/snapshot.jpg" alt="Image 2">Double Dog Dare Ya Cam 1</li>
       <li data-src="https://s72.ipcamlive.com/streams/48c1t0qmuxv2muvqz/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s72.ipcamlive.com/streams/48c1t0qmuxv2muvqz/snapshot.jpg" alt="Image 2">Double Dog Dare Ya Cam 2</li>
+      <li class="sub-section-title">Airport Cams</li>
+      <li data-src="https://s93.ipcamlive.com/streams/5d4jttrghcmpfblby/stream.m3u8" data-type="application/x-mpegURL"><img src="https://s93.ipcamlive.com/streams/5d4jttrghcmpfblby/snapshot.jpg" alt="Image 1">LAX Airport Cam 1</li>
       <li data-src="https://b10.hdrelay.com/camera/dc4b3a44-1951-49a9-bc28-9e2efca851fa/relay/chunklist_w1719231910.m3u8" data-type="application/x-mpegURL"><img src="https://www.torranceca.gov/home/showpublishedimage/1892/637093051900670000" alt="Image 1">Torrance Airport Live Cam</li>
-      <li data-src="https://edge06.nginx.hdontap.com/hosb5/etniesskatepark_clf.stream/chunklist_w350661697.m3u8" data-type="application/x-mpegURL"><img src="https://s3-us-west-1.amazonaws.com/west-coast-skateparks/skatepark_images/photos/000/000/623/original/lake_20forest-01.jpg?1459397429" alt="Image 1">Etnies Skatepark Cam</li>
-      <li data-src="https://s65.ipcamlive.com/streams/41ooycyn4ew5mx6nu/stream.m3u8" data-type="application/x-mpegURL"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/81/47/e8/ventura-harbor-village.jpg?w=1200&h=1200&s=1" alt="Image 1">Ventura Harbor Cam</li>
+      <li data-src="https://edge07.nginx.hdontap.com/hosb1/bbad_ptz.stream/chunklist_w2145961616.m3u8" data-type="application/x-mpegURL"><img src="https://www.bigbear.com/imager/files_idss_com/C347/c717e9d9-6f1a-427c-bd3c-cd40a6c5d977_bc0d2157d501d4729a3d5631708a6b2e.jpg" alt="Image 1">Big Bear Airport Live Cam</li>
+      <li class="sub-section-title">Fire Cams</li>
       <li data-src="https://623bf6bf3ce68.streamlock.net:444/design1/design1.stream/chunklist_w1663802346.m3u8" data-type="application/x-mpegURL"><img src="https://www.malibucity.org/ImageRepository/Document?documentID=28112" alt="Image 1">69BRAVO LIVE STREAMING 360 Cam</li>
       <li data-src="https://alto.boldlygoingnowhere.org/N/N.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://lirp.cdn-website.com/e1d49cde/dms3rep/multi/opt/312610876-1920w.jpg" alt="Image 1">69BRAVO Live Cam 1</li>
       <li data-src="https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccp3ohqSz_SUKUlN7KDbE0QFFDrC0D-0RQg&usqp=CAU" alt="Image 1">69BRAVO Live Cam 2</li>
       <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/FCG2Jq8VEAIAtQc?format=jpg&name=large" alt="Image 1">69BRAVO Live Cam 3</li>
       <li data-src="https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://i.vimeocdn.com/video/1360526561-d3501a49dbad318d027138b3a5e8cb209aff20298f14a296a1e700452b9b2939-d_640" alt="Image 1">69BRAVO Live Cam 4</li>
+      <li class="sub-section-title">Misc</li>
+      <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-hecuba.stream/chunklist_w1296265921.m3u8" data-type="application/x-mpegURL"><img src="https://us.123rf.com/450wm/kitleong/kitleong1710/kitleong171000571/87088553-los-angeles-oct-8-afternoon-view-of-the-beautiful-hecuba-queen-of-troy-of-usc-village-on-oct-8.jpg?ver=6" alt="Image 2">USC Hecuba Cam</li>
+      <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-tommy.stream/chunklist_w215605669.m3u8" data-type="application/x-mpegURL"><img src="https://d3jycsk0m72ya7.cloudfront.net/images/2019/5/8/usc_trojan_tommy_trojan_statue.jpg" alt="Image 2">USC Tommy Cam</li>
+      <li data-src="https://video.parks.ca.gov/PoppyReserve/Poppies.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/California_Poppies1.jpg/1200px-California_Poppies1.jpg" alt="Image 2">Poppy Reserve Live</li>
+      <li data-src="https://edge06.nginx.hdontap.com/hosb5/etniesskatepark_clf.stream/chunklist_w350661697.m3u8" data-type="application/x-mpegURL"><img src="https://s3-us-west-1.amazonaws.com/west-coast-skateparks/skatepark_images/photos/000/000/623/original/lake_20forest-01.jpg?1459397429" alt="Image 1">Etnies Skatepark Cam</li>
 
 
   <!-- More playlist sections here... -->
@@ -268,4 +282,31 @@
 </body>
 </html>
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all playlist items within the playlist section
+    const playlistItems = document.querySelectorAll(".playlist-section li");
+
+    // Disable click event for the sub-section title with class "sub-section-title"
+    const subSectionTitleElements = document.querySelectorAll(".sub-section-title");
+    subSectionTitleElements.forEach(subSection => {
+      subSection.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+
+    // Enable click events for camera items
+    playlistItems.forEach(item => {
+      if (!item.classList.contains("sub-section-title")) {
+        item.addEventListener("click", function () {
+          // Your click event handler for camera items here
+          // For example, you can play the corresponding video when clicked
+          const videoSrc = item.getAttribute("data-src");
+          const videoType = item.getAttribute("data-type");
+          // Play the video using the videoSrc and videoType
+        });
+      }
+    });
+  });
+</script>
+
   
