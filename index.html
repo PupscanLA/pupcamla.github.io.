@@ -5,7 +5,6 @@
   <link href="https://vjs.zencdn.net/7.18.0/video-js.css" rel="stylesheet">
   <script src="https://vjs.zencdn.net/7.18.0/video.min.js"></script>
   <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1594844810484908032/-CD4KOqR_200x200.jpg" type="image/x-icon"/>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     body {
       display: flex;
@@ -123,8 +122,11 @@
     </div>
 
     <div class="video-container">
-      <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%">
-        
+      <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" crossorigin="anonymous">
+        <source id="video-source" src="" type="application/x-mpegURL" />
+      </video>
+    </div>
+  </div>
         <!-- Video source will be dynamically added here -->
       </video>
     </div>
@@ -203,6 +205,8 @@
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-countylineov/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.compass.com/m/14a0eefd544e7175ca672b80a62f40a6025c1d28_img_0_d635e/origin.jpg" alt="Image 1">County Line Overview Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-countylinebeach/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://i.pinimg.com/1200x/67/81/ca/6781ca2999f5646a955444bfd2ebc9fe.jpg" alt="Image 1">County Line Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-leocarrillosb/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://images.fineartamerica.com/images-medium-large-5/sunset-over-leo-carillo-state-beach-tim-fitzharris.jpg" alt="Image 1">Leo Carrillo Cam</li>
+      <li data-src="https://edge01.london.nginx.hdontap.com/hosb1/fulkra_monarch_resort_beach.stream/chunklist_w245457793.m3u8" data-type="application/x-mpegURL"><img src="https://www.monarchbeachgolf.com/wp-content/uploads/sites/8904/2023/06/signup3.jpg?w=1024" alt="Image 1">Monarch Beach Cam</li>
+      <li data-src="https://edge01.london.nginx.hdontap.com/hosb1/easton_el-porto-overlook_panoramic.stream/chunklist_w702187909.m3u8" data-type="application/x-mpegURL"><img src="https://www.besthotels.co/content/images/2021/06/Best-Hotels-in-Manhattan-Beach.jpg" alt="Image 1">Manhattan Beach Cam</li>
       <li class="sub-section-title">Amusement Parks</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts2.stream/chunklist_w1507955537.m3u8" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/_5H-nke7fot6GN4hB3KMYWltc9g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KnottsBerryFarminCalifornia-8acc048bdf8744fd86ce3f905ad75ad6.jpg" alt="Image 2">Knotts Berry Farm Cam 1</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts1.stream/chunklist_w499315738.m3u8" data-type="application/x-mpegURL"><img src="https://employeenetwork.com/wp-content/uploads/2022/07/knottsdisplaypage2022.png" alt="Image 2">Knotts Berry Farm Cam 2</li>
