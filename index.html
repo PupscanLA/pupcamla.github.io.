@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PupcamLA</title>
   <link href="https://vjs.zencdn.net/7.18.0/video-js.css" rel="stylesheet">
   <script src="https://vjs.zencdn.net/7.18.0/video.min.js"></script>
-  <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1594844810484908032/-CD4KOqR_200x200.jpg" type="image/x-icon"/>
+  <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1594844810484908032/-CD4KOqR_200x200.jpg" type="image/x-icon">
   <style>
     body {
       display: flex;
@@ -120,12 +122,16 @@
       <h2></h2>
       <p id="pdt-time"></p>
     </div>
-
+    <!-- Video Container -->
     <div class="video-container">
-      <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" crossorigin="anonymous">
-        <source id="video-source" src="" type="application/x-mpegURL" />
+      <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" crossorigin="anonymous">
+        <!-- Source elements for different video formats -->
+        <source src="Your_M3U8_URL_Here" type="application/x-mpegURL">
+        <!-- Add more source elements for other formats if needed -->
       </video>
     </div>
+    <!-- Add the iframe below the video container -->
+   <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6ImFkc3RQNUxPZE1WR2drOXciLCJhbnZhY2siOiJYOFBPYTR6cEdaTW1laXEwd3FpTzhJUDVyTXFRTTlWTiIsInNoYXJlTGluayI6Imh0dHBzOi8va3RsYS5jb20vbmV3cy9sb2NhbC1uZXdzL3dhdGNoLWxpdmUtd2lsZGZpcmUtZXJ1cHRzLWluLXJpdmVyc2lkZS1jb3VudHkvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6Imt0bGEuY29tIiwidmVyc2lvbiI6IjUuMi4wIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImMzIjoia3RsYS5jb20iLCJuc19zdF9zdCI6Imt0bGEiLCJuc19zdF9wdSI6Ik5leHN0YXIiLCJuc19zdF9nZSI6Ik5ld3MiLCJjNCI6ImxpdmVzdHJlYW0iLCJjc191Y2ZyIjoxfX0sImRmcCI6eyJjbGllbnRTaWRlIjp7ImFkVGFnVXJsIjoiIn19LCJuaWVsc2VuIjp7ImFwaWQiOiJQODAxMUQ3MTAtRkI1Ri00NDY3LTk1QUYtMjU3MzE3MzdGMkVGIiwic2Zjb2RlIjoiZGNyIiwidHlwZSI6ImRjciIsImFwbiI6IkFudmF0byIsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJhZGxvYWR0eXBlIjoyLCJhZE1vZGVsIjoyfSwib3B0T3V0IjpmYWxzZX0sInNlZ21lbnRDdXN0b20iOnsic2NyaXB0IjoiaHR0cHM6Ly9zZWdtZW50LnBzZy5uZXhzdGFyZGlnaXRhbC5uZXQvdjIvYW52YXRvLmpzIiwid3JpdGVLZXkiOiJoZ0ZqQTMycDF1eWVoenZHY1Q5TEVmUHlrQkFKSjZqTyIsInBsdWdpbnNMb2FkaW5nVGltZW91dCI6MTIsInBsYXllck5hbWUiOiJMZWFkIE1lZGlhIn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lKaFpITjBVRFZNVDJSTlZrZG5hemwzSWl3aWFYTnpJam9pV0RoUVQyRTBlbkJIV2sxdFpXbHhNSGR4YVU4NFNWQTFjazF4VVUwNVZrNGlMQ0psZUhBaU9qRTJPRGM1TURZMk9UaDkucklUUWdyNDZ2azV4YVlpaDdydzB3dnBJTENzZ05HcmYzZU8yaDltLVlaMCJ9"  width ="1150" height="700"></iframe>
   </div>
         <!-- Video source will be dynamically added here -->
       </video>
@@ -154,7 +160,6 @@
     <h2>Los Angeles Chopper Feed</h2>
     <ul id="playlist">
       <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://static.livebooks.com/d9ed99b025a54018b61ed965c1adc6db/i/a39c619902c44cac9e7de46f2df60ca5/1/4SoifmQp7LJ6yDtMoKaua/Fox_C0350.jpg" alt="Image 2">Fox/KCAL</li>
-      <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://i.ytimg.com/vi/LoWoqQZG08Y/maxresdefault.jpg" alt="Image 2">Sky5</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream5/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://ots.nbcwpshield.com/wp-content/uploads/2019/09/03-25-2015-NEWSCHOPPER4_1.jpg?fit=1270%2C766" alt="Image 1">NBC4 Chopper Main</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream2/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://ots.nbcwpshield.com/wp-content/uploads/2019/09/03-25-2015-NEWSCHOPPER4_7.jpg?fit=1270%2C766" alt="Image 1">NBC4 Chopper Second</li>
       <li data-src="https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/KABCLive2.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/EHDGAAeUUAU06BX.jpg:large" alt="Image 1">Air7HD</li>
@@ -169,13 +174,8 @@
       <li data-src="https://edge01.london.nginx.hdontap.com/hosb1/seaview_fixed_swellmagnet.stream/chunklist_w1444973918.m3u8" data-type="application/x-mpegURL"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/168778530.jpg?k=00b2cc7c72181f6472101b25d0a5deafdd1d7526dcf5aa028ea1317b61b77dfa&o=&hp=1" alt="Image 2">Traffic Cam on Highland Ave </li>
       <li class="sub-section-title">Beaches</li>
       <li data-src="https://cdn3.wowza.com/5/RE0wRFRDK05SMVF6/California/laoverview.stream/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRyy-jdEb2ncoIy2nyHmR4qRGmfwuvpKOHw&usqp=CAU" alt="Image 2">Los Angeles Beach Cam</li>
-      <li data-src="https://edge07.nginx.hdontap.com/hosb1/santamonica_swellmagnet.stream/chunklist_w952119598.m3u8" data-type="application/x-mpegURL"><img src="https://media.cntraveler.com/photos/5a8db36a723a834885e1527b/16:9/w_2560,c_limit/Santa-Monica-State-Beach_GettyImages-579739546.jpg" alt="Image 1">Santa Monica Beach Cam 1</li>
-      <li data-src="https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kcajbp1.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w728235556.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/business/santa-monica-pier/h_2000-crm-la-santa-monica-pier-81caa3e45056a36_81caaa5e-5056-a36f-236a20f47e02fec1.jpg" alt="Image 1">Santa Monica Pier Cam 1</li>
-      <li data-src="https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kwpxbpv.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w2073378659.m3u8" data-type="application/x-mpegURL"><img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475898-Santa-Monica-Pier.jpg" alt="Image 1">Santa Monica Pier Cam 2</li>
-      <li data-src="https://usw01-smr03-relay.ozolio.com/hls-live/_definst_/relay01.ikdybp6.fd0.sm1.av2.mt1.at0.as0.sh2.rt8669.rc0.edge.vpass.stream/chunklist_w1760431678.m3u8" data-type="application/x-mpegURL"><img src="https://images.squarespace-cdn.com/content/v1/5e0e65adcd39ed279a0402fd/1580441261028-2FW8URSB0H2G8BER9EJ2/vasile-tiplea-473079-unsplash.jpg" alt="Image 1">Santa Monica Pier Cam 3</li>
-      <li data-src="https://stream-us1-bravo.dropcam.com:443/nexus_aac/e9806cd6079e4eb0ba5302f2b0bf8930/playlist.m3u8?public=M5YAwFAdeV" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Beach_bikepath_in_the_Venice_Beach_park%2C_California.jpg" alt="Image 2">Venice Beach Cam 1</li>
-      <li data-src="https://5ddd47d64e730.streamlock.net:444/westland/westland.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1000/public/VC_California101_VeniceBeach_Stock_RF_638340372_1280x640.jpg?itok=50tR-rTR" alt="Image 2">Venice Beach Cam 2</li>
-      <li data-src="https://edge06.nginx.hdontap.com/hosb1/venice_swellmagnet.stream/chunklist_w221602299.m3u8" data-type="application/x-mpegURL"><img src="https://www.thebacklabel.com/wp-content/uploads/2013/11/venice-beach.jpg" alt="Image 2">Venice Beach Cam 3</li>
+      <li data-src="https://5ddd47d64e730.streamlock.net:444/westland/westland.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1000/public/VC_California101_VeniceBeach_Stock_RF_638340372_1280x640.jpg?itok=50tR-rTR" alt="Image 2">Venice Beach Cam 1</li>
+      <li data-src="https://edge06.nginx.hdontap.com/hosb1/venice_swellmagnet.stream/chunklist_w221602299.m3u8" data-type="application/x-mpegURL"><img src="https://www.thebacklabel.com/wp-content/uploads/2013/11/venice-beach.jpg" alt="Image 2">Venice Beach Cam 2</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/innocean/innocean.stream/chunklist_w815118782.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2016/06/downtown-huntington-beach.jpg" alt="Image 2">Huntington Beach Overview</li>
       <li data-src="https://cs7.pixelcaster.com/live/hbsouth.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_716,q_80,w_639/v1/clients/surfcityusa-redesign/Mike_Marshall_Pier_Sunset_2aac8d84-7bed-433c-bdce-3ecc7d6cfc43.jpg" alt="Image 2">Huntington Beach South Of pier</li>
       <li data-src="https://cs7.pixelcaster.com/live/hbnorth.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/surfcityusa/DJI_0387_1__2a9cbdab-8c22-4a75-bc70-ff743394f11d.jpg" alt="Image 2">Huntington Beach North Of Pier</li>
@@ -189,7 +189,6 @@
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venturapointnorth/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.dailynews.com/wp-content/uploads/2022/08/LDN-L-VENTURA-FAIR-0803-08.jpg?w=620" alt="Image 1">Ventura Point North Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venturapoint/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://visitventuraca.com/wp-content/uploads/2021/06/51136891025_a9f88b8012_k.jpg" alt="Image 1">Ventura Point Cam</li>
       <li data-src="https://edge06.nginx.hdontap.com/hosb1/swellmagnet_manhattan-pier_north.stream/chunklist_w288819576.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2016/06/Manhattan-beach-pier-page-california-bryce-photos-2-Large-1000x624.jpg" alt="Image 1">Manhattan Beach Pier North Cam</li>
-      <li data-src="https://edge06.nginx.hdontap.com/hosb1/torrance_swellmagnet.stream/chunklist_w1201055196.m3u8" data-type="application/x-mpegURL"><img src="https://pinnaclepropertymanagement.nesthub.com/images/blog/beach-california.jpg" alt="Image 1">Torrance Beach Cam</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/swellmagnet_hermosa-fixed_south.stream/chunklist_w1678840715.m3u8" data-type="application/x-mpegURL"><img src="https://growthzonesitesprod.azureedge.net/wp-content/uploads/sites/1262/2021/11/F-FIESTA-DRONE_fiesta2021-1024x767.jpg" alt="Image 1">Hermosa Beach Cam</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/swellmagnet_elporto_strand-static.stream/chunklist_w847500545.m3u8" data-type="application/x-mpegURL"><img src="https://spot-thumbnails.cdn-surfline.com/spots/5842041f4e65fad6a7708900/5842041f4e65fad6a7708900_1500.jpg" alt="Image 1">El Porto Manhattan Beach Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-willrogers/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiasbestbeaches.com/photos8/will_rogers_beach_volleyball.jpg" alt="Image 1">Will Rogers State Beach Cam</li>
@@ -216,72 +215,16 @@
       <li data-src="https://623bf6bf3ce68.streamlock.net:444/design1/design1.stream/chunklist_w1663802346.m3u8" data-type="application/x-mpegURL"><img src="https://www.malibucity.org/ImageRepository/Document?documentID=28112" alt="Image 1">69BRAVO LIVE STREAMING 360 Cam</li>
       <li data-src="https://alto.boldlygoingnowhere.org/N/N.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://lirp.cdn-website.com/e1d49cde/dms3rep/multi/opt/312610876-1920w.jpg" alt="Image 1">69BRAVO Live Cam 1</li>
       <li data-src="https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccp3ohqSz_SUKUlN7KDbE0QFFDrC0D-0RQg&usqp=CAU" alt="Image 1">69BRAVO Live Cam 2</li>
-      <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/FCG2Jq8VEAIAtQc?format=jpg&name=large" alt="Image 1">69BRAVO Live Cam 3</li>
+      <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://live.staticflickr.com/354/19518914024_24f80015b8_n.jpg" alt="Image 1">69BRAVO Live Cam 3</li>
       <li data-src="https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://i.vimeocdn.com/video/1360526561-d3501a49dbad318d027138b3a5e8cb209aff20298f14a296a1e700452b9b2939-d_640" alt="Image 1">69BRAVO Live Cam 4</li>
-      <li class="sub-section-title">210 Fwy Cams</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_109.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_112.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_113.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_127.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_128.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_172.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_179.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_180.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_181.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_182.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_364.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_365.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_366.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_210_367.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li class="sub-section-title">10 Fwy Cams</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_1.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_2.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_3.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_4.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_5.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_6.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_7.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_8.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_10.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_11.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_12.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_13.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_14.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_15.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_17.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_18.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_19.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_20.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_21.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_27.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_28.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_30.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_31.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_33.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_34.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_10_197.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li class="sub-section-title">60 Fwy Cams</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_153.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_154.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_157.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_161.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_354.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_355.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_356.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_357.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_358.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_360.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_361.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_362.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_363.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_60_60.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li class="sub-section-title">215 Fwy Cams</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_215_186.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_215_187.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_215_189.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_215_42.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_215_191.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
-      <li data-src="https://wzmedia.dot.ca.gov/D8/LB-8_215_192.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="PNG" alt="Image 1">Name</li>
+      <li class="sub-section-title">CNN Newsource Feed</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039047/CNNNewsource1/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 1</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039049/CNNNewsource2/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 2</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039050/CNNNewsource3/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 3</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039051/CNNNewsource4/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 4</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039052/CNNNewsource5/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 5</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039053/CNNNewsource6/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 6</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039054/CNNNewsource7/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 7</li>
       <li class="sub-section-title">Misc</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-hecuba.stream/chunklist_w1296265921.m3u8" data-type="application/x-mpegURL"><img src="https://us.123rf.com/450wm/kitleong/kitleong1710/kitleong171000571/87088553-los-angeles-oct-8-afternoon-view-of-the-beautiful-hecuba-queen-of-troy-of-usc-village-on-oct-8.jpg?ver=6" alt="Image 2">USC Hecuba Cam</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-tommy.stream/chunklist_w215605669.m3u8" data-type="application/x-mpegURL"><img src="https://d3jycsk0m72ya7.cloudfront.net/images/2019/5/8/usc_trojan_tommy_trojan_statue.jpg" alt="Image 2">USC Tommy Cam</li>
@@ -293,8 +236,6 @@
 
   <!-- More playlist sections here... -->
   
-  
-
   <script>
     var videoPlayer = videojs('video-player');
     var playlistItems = document.querySelectorAll('#playlist li');
@@ -388,6 +329,26 @@
         });
       }
     });
+  });
+</script>
+<script>
+  // Wait for the DOM to be ready
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the video element by its id
+    var videoElement = document.getElementById("video-player");
+
+    // Set the 'muted' attribute to true to mute the video
+    videoElement.muted = true;
+  });
+</script>
+<script>
+  // Wait for the DOM to be ready
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the video element by its id
+    var videoElement = document.getElementById("video-player");
+
+    // Set the 'muted' attribute to true to mute the video
+    videoElement.muted = true;
   });
 </script>
 
