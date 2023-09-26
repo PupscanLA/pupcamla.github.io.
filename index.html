@@ -112,16 +112,15 @@
 <body>
   <div class="container">
     <h1>PupcamLA</h1>
-
-    <!-- Add the textbox to display m3u8 URL above the player -->
-    <div class="m3u8-url-box">
-      <label for="m3u8-url">m3u8 URL:</label>
-      <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
-    </div>
     <div class="clock-section">
       <h2></h2>
       <p id="pdt-time"></p>
     </div>
+        <!-- Add the textbox to display m3u8 URL above the player -->
+        <div class="m3u8-url-box">
+          <label for="m3u8-url">m3u8 URL:</label>
+          <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
+        </div>
     <!-- Video Container -->
     <div class="video-container">
       <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" crossorigin="anonymous">
@@ -130,8 +129,10 @@
         <!-- Add more source elements for other formats if needed -->
       </video>
     </div>
+    
     <!-- Add the iframe below the video container -->
-   <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6ImFkc3RQNUxPZE1WR2drOXciLCJhbnZhY2siOiJYOFBPYTR6cEdaTW1laXEwd3FpTzhJUDVyTXFRTTlWTiIsInNoYXJlTGluayI6Imh0dHBzOi8va3RsYS5jb20vbmV3cy9sb2NhbC1uZXdzL3dhdGNoLWxpdmUtd2lsZGZpcmUtZXJ1cHRzLWluLXJpdmVyc2lkZS1jb3VudHkvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6Imt0bGEuY29tIiwidmVyc2lvbiI6IjUuMi4wIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImMzIjoia3RsYS5jb20iLCJuc19zdF9zdCI6Imt0bGEiLCJuc19zdF9wdSI6Ik5leHN0YXIiLCJuc19zdF9nZSI6Ik5ld3MiLCJjNCI6ImxpdmVzdHJlYW0iLCJjc191Y2ZyIjoxfX0sImRmcCI6eyJjbGllbnRTaWRlIjp7ImFkVGFnVXJsIjoiIn19LCJuaWVsc2VuIjp7ImFwaWQiOiJQODAxMUQ3MTAtRkI1Ri00NDY3LTk1QUYtMjU3MzE3MzdGMkVGIiwic2Zjb2RlIjoiZGNyIiwidHlwZSI6ImRjciIsImFwbiI6IkFudmF0byIsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJhZGxvYWR0eXBlIjoyLCJhZE1vZGVsIjoyfSwib3B0T3V0IjpmYWxzZX0sInNlZ21lbnRDdXN0b20iOnsic2NyaXB0IjoiaHR0cHM6Ly9zZWdtZW50LnBzZy5uZXhzdGFyZGlnaXRhbC5uZXQvdjIvYW52YXRvLmpzIiwid3JpdGVLZXkiOiJoZ0ZqQTMycDF1eWVoenZHY1Q5TEVmUHlrQkFKSjZqTyIsInBsdWdpbnNMb2FkaW5nVGltZW91dCI6MTIsInBsYXllck5hbWUiOiJMZWFkIE1lZGlhIn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lKaFpITjBVRFZNVDJSTlZrZG5hemwzSWl3aWFYTnpJam9pV0RoUVQyRTBlbkJIV2sxdFpXbHhNSGR4YVU4NFNWQTFjazF4VVUwNVZrNGlMQ0psZUhBaU9qRTJPRGM1TURZMk9UaDkucklUUWdyNDZ2azV4YVlpaDdydzB3dnBJTENzZ05HcmYzZU8yaDltLVlaMCJ9"  width ="1150" height="700"></iframe>
+<iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6ImFkc3RQNUxPZE1WR2drOXciLCJhbnZhY2siOiJYOFBPYTR6cEdaTW1laXEwd3FpTzhJUDVyTXFRTTlWTiIsInNoYXJlTGluayI6Imh0dHBzOi8va3RsYS5jb20vbmV3cy9sb2NhbC1uZXdzL3dhdGNoLWxpdmUtd2lsZGZpcmUtZXJ1cHRzLWluLXJpdmVyc2lkZS1jb3VudHkvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6Imt0bGEuY29tIiwidmVyc2lvbiI6IjUuMi4wIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImMzIjoia3RsYS5jb20iLCJuc19zdF9zdCI6Imt0bGEiLCJuc19zdF9wdSI6Ik5leHN0YXIiLCJuc19zdF9nZSI6Ik5ld3MiLCJjNCI6ImxpdmVzdHJlYW0iLCJjc191Y2ZyIjoxfX0sImRmcCI6eyJjbGllbnRTaWRlIjp7ImFkVGFnVXJsIjoiIn19LCJuaWVsc2VuIjp7ImFwaWQiOiJQODAxMUQ3MTAtRkI1Ri00NDY3LTk1QUYtMjU3MzE3MzdGMkVGIiwic2Zjb2RlIjoiZGNyIiwidHlwZSI6ImRjciIsImFwbiI6IkFudmF0byIsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJhZGxvYWR0eXBlIjoyLCJhZE1vZGVsIjoyfSwib3B0T3V0IjpmYWxzZX0sInNlZ21lbnRDdXN0b20iOnsic2NyaXB0IjoiaHR0cHM6Ly9zZWdtZW50LnBzZy5uZXhzdGFyZGlnaXRhbC5uZXQvdjIvYW52YXRvLmpzIiwid3JpdGVLZXkiOiJoZ0ZqQTMycDF1eWVoenZHY1Q5TEVmUHlrQkFKSjZqTyIsInBsdWdpbnNMb2FkaW5nVGltZW91dCI6MTIsInBsYXllck5hbWUiOiJMZWFkIE1lZGlhIn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lKaFpITjBVRFZNVDJSTlZrZG5hemwzSWl3aWFYTnpJam9pV0RoUVQyRTBlbkJIV2sxdFpXbHhNSGR4YVU4NFNWQTFjazF4VVUwNVZrNGlMQ0psZUhBaU9qRTJPRGM1TURZMk9UaDkucklUUWdyNDZ2azV4YVlpaDdydzB3dnBJTENzZ05HcmYzZU8yaDltLVlaMCJ9"  width ="640" height="360"></iframe>
+
   </div>
         <!-- Video source will be dynamically added here -->
       </video>
@@ -160,6 +161,7 @@
     <h2>Los Angeles Chopper Feed</h2>
     <ul id="playlist">
       <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://static.livebooks.com/d9ed99b025a54018b61ed965c1adc6db/i/a39c619902c44cac9e7de46f2df60ca5/1/4SoifmQp7LJ6yDtMoKaua/Fox_C0350.jpg" alt="Image 2">Fox/KCAL</li>
+      <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://i.ytimg.com/vi/LoWoqQZG08Y/maxresdefault.jpg" alt="Image 2">Sky5</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream5/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://ots.nbcwpshield.com/wp-content/uploads/2019/09/03-25-2015-NEWSCHOPPER4_1.jpg?fit=1270%2C766" alt="Image 1">NBC4 Chopper Main</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream2/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://ots.nbcwpshield.com/wp-content/uploads/2019/09/03-25-2015-NEWSCHOPPER4_7.jpg?fit=1270%2C766" alt="Image 1">NBC4 Chopper Second</li>
       <li data-src="https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/KABCLive2.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/EHDGAAeUUAU06BX.jpg:large" alt="Image 1">Air7HD</li>
