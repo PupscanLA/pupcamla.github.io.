@@ -107,7 +107,35 @@
       pointer-events: none;
       /* Add any other styles you want for the non-clickable element */
     }
-  </style>
+  /* Custom styles for the button */
+  .custom-button {
+    background-color: #e68ad5; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    border: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+  }
+
+  .custom-button:hover {
+    background-color: #69a0f1; /* Change to the hover background color you prefer */
+  }
+  /* Styling for the link button */
+.link-button {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #e68ad5; /* Background color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underlines on the link */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+}
+
+.link-button:hover {
+  background-color: #3366cc; /* Change to the hover background color you prefer */
+}
+</style>
 </head>
 <body>
   <div class="container">
@@ -120,6 +148,11 @@
         <div class="m3u8-url-box">
           <label for="m3u8-url">m3u8 URL:</label>
           <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
+          <button id="copy-button" class="custom-button">Copy URL</button>
+          <!-- Add the checkbox button with the checked attribute -->
+          <label for="mute-checkbox">Mute</label>
+          <input type="checkbox" id="mute-checkbox" checked>
+          <a href="vidgrid.tk.gg" class="link-button" target="_blank">vidgrid</a>
         </div>
     <!-- Video Container -->
     <div class="video-container">
@@ -339,24 +372,51 @@
   });
 </script>
 <script>
-  // Wait for the DOM to be ready
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the video element by its id
-    var videoElement = document.getElementById("video-player");
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoPlayer = videojs('video-player');
+    const copyButton = document.getElementById('copy-button');
+    const m3u8UrlTextbox = document.getElementById('m3u8-url');
 
-    // Set the 'muted' attribute to true to mute the video
-    videoElement.muted = true;
+    // Function to copy the M3U8 URL to the clipboard
+    function copyM3U8Url() {
+      m3u8UrlTextbox.select();
+      document.execCommand('copy');
+      // You can provide feedback to the user here, such as displaying a message
+      alert('M3U8 URL copied to clipboard');
+    }
+
+    // Attach click event listener to the copy button
+    copyButton.addEventListener('click', copyM3U8Url);
   });
 </script>
 <script>
-  // Wait for the DOM to be ready
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the video element by its id
-    var videoElement = document.getElementById("video-player");
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoPlayer = videojs('video-player');
+    const copyButton = document.getElementById('copy-button');
+    const m3u8UrlTextbox = document.getElementById('m3u8-url');
+    const muteCheckbox = document.getElementById('mute-checkbox'); // Get the checkbox element
 
-    // Set the 'muted' attribute to true to mute the video
-    videoElement.muted = true;
+    // Function to copy the M3U8 URL to the clipboard
+    function copyM3U8Url() {
+      m3u8UrlTextbox.select();
+      document.execCommand('copy');
+      alert('M3U8 URL copied to clipboard');
+    }
+
+    // Function to toggle mute/unmute based on checkbox state
+    function toggleMute() {
+      if (muteCheckbox.checked) {
+        videoPlayer.muted(true); // Mute the player when the checkbox is checked
+      } else {
+        videoPlayer.muted(false); // Unmute the player when the checkbox is unchecked
+      }
+    }
+
+    // Attach click event listeners to the copy button and the checkbox
+    copyButton.addEventListener('click', copyM3U8Url);
+    muteCheckbox.addEventListener('change', toggleMute); // Listen for checkbox changes
+
+    // Initially set the player to muted based on the checkbox state
+    toggleMute();
   });
 </script>
-
-  
