@@ -23,12 +23,13 @@
       background-color: #82a9d4;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
+      height: 920px;
     }
     h1 {
       font-size: 32px;
       color: #333333;
       text-align: center;
-      padding: 760px 0;
+      padding: 60px 0;
       margin: 0;
     }
     .video-container {
@@ -102,43 +103,38 @@
       max-height: 200px;
       overflow-y: auto;
     }
-        /* Apply this CSS to make the "sub-section-title" not clickable */
-        li.sub-section-title {
+    /* Apply this CSS to make the "sub-section-title" not clickable */
+    li.sub-section-title {
       pointer-events: none;
       /* Add any other styles you want for the non-clickable element */
     }
-  /* Custom styles for the button */
-  .custom-button {
-    background-color: #e68ad5; /* Change to your desired background color */
-    color: #fff; /* Change to your desired text color */
-    border: none;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
-  }
-
-  .custom-button:hover {
-    background-color: #69a0f1; /* Change to the hover background color you prefer */
-  }
-</style>
+    /* Custom styles for the button */
+    .custom-button {
+      background-color: #e68ad5; /* Change to your desired background color */
+      color: #fff; /* Change to your desired text color */
+      border: none;
+      padding: 10px 20px; /* Adjust padding as needed */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+    }
+    .custom-button:hover {
+      background-color: #69a0f1; /* Change to the hover background color you prefer */
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>PupcamLA</h1>
-    <div class="clock-section">
-      <h2></h2>
-      <p id="pdt-time"></p>
+    <!-- Add the textbox to display m3u8 URL above the player -->
+    <div class="m3u8-url-box">
+      <label for="m3u8-url">m3u8 URL:</label>
+      <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
+      <button id="copy-button" class="custom-button">Copy URL</button>
+      <!-- Add the checkbox button with the checked attribute -->
+      <label for="mute-checkbox">Mute</label>
+      <input type="checkbox" id="mute-checkbox" checked>
     </div>
-        <!-- Add the textbox to display m3u8 URL above the player -->
-        <div class="m3u8-url-box">
-          <label for="m3u8-url">m3u8 URL:</label>
-          <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
-          <button id="copy-button" class="custom-button">Copy URL</button>
-          <!-- Add the checkbox button with the checked attribute -->
-          <label for="mute-checkbox">Mute</label>
-          <input type="checkbox" id="mute-checkbox" checked>
-        </div>
     <!-- Video Container -->
     <div class="video-container">
       <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" crossorigin="anonymous">
@@ -147,23 +143,29 @@
         <!-- Add more source elements for other formats if needed -->
       </video>
     </div>
-  
     <!-- Add the iframe below the video container -->
-<div class="iframe-box">
-  <h2>Sky5</h2>
-  <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6ImFkc3RQNUxPZE1WR2drOXciLCJhbnZhY2siOiJYOFBPYTR6cEdaTW1laXEwd3FpTzhJUDVyTXFRTTlWTiIsInNoYXJlTGluayI6Imh0dHBzOi8va3RsYS5jb20vbmV3cy9sb2NhbC1uZXdzL3dhdGNoLWxpdmUtd2lsZGZpcmUtZXJ1cHRzLWluLXJpdmVyc2lkZS1jb3VudHkvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6Imt0bGEuY29tIiwidmVyc2lvbiI6IjUuMi4wIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImMzIjoia3RsYS5jb20iLCJuc19zdF9zdCI6Imt0bGEiLCJuc19zdF9wdSI6Ik5leHN0YXIiLCJuc19zdF9nZSI6Ik5ld3MiLCJjNCI6ImxpdmVzdHJlYW0iLCJjc191Y2ZyIjoxfX0sImRmcCI6eyJjbGllbnRTaWRlIjp7ImFkVGFnVXJsIjoiIn19LCJuaWVsc2VuIjp7ImFwaWQiOiJQODAxMUQ3MTAtRkI1Ri00NDY3LTk1QUYtMjU3MzE3MzdGMkVGIiwic2Zjb2RlIjoiZGNyIiwidHlwZSI6ImRjciIsImFwbiI6IkFudmF0byIsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJhZGxvYWR0eXBlIjoyLCJhZE1vZGVsIjoyfSwib3B0T3V0IjpmYWxzZX0sInNlZ21lbnRDdXN0b20iOnsic2NyaXB0IjoiaHR0cHM6Ly9zZWdtZW50LnBzZy5uZXhzdGFyZGlnaXRhbC5uZXQvdjIvYW52YXRvLmpzIiwid3JpdGVLZXkiOiJoZ0ZqQTMycDF1eWVoenZHY1Q5TEVmUHlrQkFKSjZqTyIsInBsdWdpbnNMb2FkaW5nVGltZW91dCI6MTIsInBsYXllck5hbWUiOiJMZWFkIE1lZGlhIn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lKaFpITjBVRFZNVDJSTlZrZG5hemwzSWl3aWFYTnpJam9pV0RoUVQyRTBlbkJIV2sxdFpXbHhNSGR4YVU4NFNWQTFjazF4VVUwNVZrNGlMQ0psZUhBaU9qRTJPRGM1TURZMk9UaDkucklUUWdyNDZ2azV4YVlpaDdydzB3dnBJTENzZ05HcmYzZU8yaDltLVlaMCJ9"  width ="640" height="360"></iframe>
-  <div class="iframe-box">
-
-    <h2>LAX Airport</h2>
-    <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://api.wetmet.net/widgets/stream/frame.php?uid=a4a30b2291758ac24d435acf266bb100" width ="640" height="360"></iframe>
-
+    <h2>Sky5</h2>
+    <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6ImFkc3RQNUxPZE1WR2drOXciLCJhbnZhY2siOiJYOFBPYTR6cEdaTW1laXEwd3FpTzhJUDVyTXFRTTlWTiIsInNoYXJlTGluayI6Imh0dHBzOi8va3RsYS5jb20vbmV3cy9sb2NhbC1uZXdzL3dhdGNoLWxpdmUtd2lsZGZpcmUtZXJ1cHRzLWluLXJpdmVyc2lkZS1jb3VudHkvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6Imt0bGEuY29tIiwidmVyc2lvbiI6IjUuMi4wIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImMzIjoia3RsYS5jb20iLCJuc19zdF9zdCI6Imt0bGEiLCJuc19zdF9wdSI6Ik5leHN0YXIiLCJuc19zdF9nZSI6Ik5ld3MiLCJjNCI6ImxpdmVzdHJlYW0iLCJjc191Y2ZyIjoxfX0sImRmcCI6eyJjbGllbnRTaWRlIjp7ImFkVGFnVXJsIjoiIn19LCJuaWVsc2VuIjp7ImFwaWQiOiJQODAxMUQ3MTAtRkI1Ri00NDY3LTk1QUYtMjU3MzE3MzdGMkVGIiwic2Zjb2RlIjoiZGNyIiwidHlwZSI6ImRjciIsImFwbiI6IkFudmF0byIsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJhZGxvYWR0eXBlIjoyLCJhZE1vZGVsIjoyfSwib3B0T3V0IjpmYWxzZX0sInNlZ21lbnRDdXN0b20iOnsic2NyaXB0IjoiaHR0cHM6Ly9zZWdtZW50LnBzZy5uZXhzdGFyZGlnaXRhbC5uZXQvdjIvYW52YXRvLmpzIiwid3JpdGVLZXkiOiJoZ0ZqQTMycDF1eWVoenZHY1Q5TEVmUHlrQkFKSjZqTyIsInBsdWdpbnNMb2FkaW5nVGltZW91dCI6MTIsInBsYXllck5hbWUiOiJMZWFkIE1lZGlhIn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lKaFpITjBVRFZNVDJSTlZrZG5hemwzSWl3aWFYTnpJam9pV0RoUVQyRTBlbkJIV2sxdFpXbHhNSGR4YVU4NFNWQTFjazF4VVUwNVZrNGlMQ0psZUhBaU9qRTJPRGM1TURZMk9UaDkucklUUWdyNDZ2azV4YVlpaDdydzB3dnBJTENzZ05HcmYzZU8yaDltLVlaMCJ9"  width ="640" height="360"></iframe>
+    <div class="iframe-box">
+  
+      <h2>Sky5</h2>
+      <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiRVBGT1giLCJ2IjoiYWRzdHdweVJNUng0cThLOSIsImFudmFjayI6ImJtUXY4blhNYWxDT29iQmh2aHBvOWVNVEUxT3pONGxEIiwic2hhcmVMaW5rIjoiaHR0cHM6Ly93d3cua3R2dS5jb20va3R2dS1mb3gtMi1uZXdzLWxpdmUiLCJwbHVnaW5zIjp7ImN1c3RvbUNvbXNjb3JlUGx1Z2luIjp7ImMzIjoiS1RWVSBGT1ggMiIsImM2IjoiRlRTIiwic2NyaXB0IjoiaHR0cHM6Ly9zdGF0aWMuZm94dHYuY29tL3N0YXRpYy9vcmlvbi9zY3JpcHRzL2NvcmUvdXRpbHMvY29tc2NvcmUvTmF0aXZlQ29tc2NvcmVQbHVnaW4uanMiLCJzZGsiOiJodHRwczovL3N0YXRpYy5mb3h0di5jb20vc3RhdGljL29yaW9uL3NjcmlwdHMvY29yZS91dGlscy9jb21zY29yZS9jb21zY29yZS5qcyIsImNsaWVudElkIjoiNjA0MjkwMSIsIm5zX3N0X3N0IjoiS1RWVSIsInRpdGxlIjoiIiwibnNfc3RfY2kiOiJhZHN0d3B5Uk1SeDRxOEs5IiwiYzQiOm51bGwsInNldEdlbnJlTmFtZSI6Ik5ld3MiLCJhcHBOYW1lIjoiRk9YIEtUVlUgU2FuIEZyYW5jaXNjbyBOZXdzIEFwcCJ9LCJkZnAiOnsiY2xpZW50U2lkZSI6eyJhZFRhZ1VybCI6bnVsbCwia2V5VmFsdWVzIjp7InB0eXBlIjoidmlkZW8tbGl2ZSIsInVzX3ByaXZhY3kiOiIxWU5OIn19LCJzZXJ2ZXJTaWRlIjp7InVzX3ByaXZhY3kiOiIxWU5OIn0sImxpYnJhcnlSZXF1ZXN0ZWQiOnRydWV9LCJuYXRpdmVIZWFydGJlYXRQbHVnaW4iOnsic2NyaXB0IjoiaHR0cDovL3N0YXRpYy5mb3h0di5jb20vc3RhdGljL29yaW9uL3NjcmlwdHMvY29yZS91dGlscy9hZG9iZS9DdXN0b21IZWFydGJlYXRQbHVnaW4uanMiLCJwcmltYXJ5X2J1c2luZXNzX3VuaXQiOiJmdHMiLCJzZWNvbmRhcnlfYnVzaW5lc3NfdW5pdCI6Imt0dnUiLCJhcHBfbmFtZSI6Imt0dnUuY29tIiwiYXBwX3BsYXRmb3JtIjoid2ViIiwiYXBwX3ZlcnNpb24iOiIxLjAuMCIsInBsYXllclVuaXF1ZUlkIjoicGxheWVyLWMzY2NmOGFkLWVmZjItNGNiMi05YzUxLWJiY2QzMjAxZDFkYiIsInZpZGVvX2lkIjoiYWRzdHdweVJNUng0cThLOSJ9fSwiaHRtbDUiOnRydWUsInRva2VuIjoiWjUyZFdMcGEzOXZLN1k2TUJtc0VsQk9saWF6dVk3Qy10ZGRacXJzVHRzVX5NbjR3ZmcifQ%3D%3D"  width ="640" height="360"></iframe>
+      <div class="iframe-box">
+    </div>
+    <div class="iframe-box">
+      <h2>Los Angeles International Airport</h2>
+      <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://api.wetmet.net/widgets/stream/frame.php?uid=a4a30b2291758ac24d435acf266bb100"
+        width="640" height="360"></iframe>
+    </div>
     <div class="iframe-box">
       <h2>Santa Monica</h2>
-      <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://api.wetmet.net/widgets/stream/frame.php?uid=0985333ee65625a3b1139ed97b4f27bc" width ="640" height="360"></iframe>
-
-      <div class="iframe-box">
-        <h2>Mount Wilson</h2>
-        <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://api.wetmet.net/widgets/stream/frame.php?uid=3d48c47c9bf2c9cb31d13c6aecdf0613" width ="640" height="360"></iframe>
+      <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://api.wetmet.net/widgets/stream/frame.php?uid=0985333ee65625a3b1139ed97b4f27bc"
+        width="640" height="360"></iframe>
+    </div>
+    <div class="iframe-box">
+      <h2>Mount Wilson</h2>
+      <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://api.wetmet.net/widgets/stream/frame.php?uid=3d48c47c9bf2c9cb31d13c6aecdf0613"
+        width="640" height="360"></iframe>
   </div>
         <!-- Video source will be dynamically added here -->
       </video>
@@ -180,32 +182,48 @@
       <li data-src="https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master_1.m3u8" data-type="application/x-mpegURL"><img src="https://yt3.googleusercontent.com/tlmQnXTk6ATgfLoBIFGHhw2aCBAFiJwHMhSYU_0FdNJwwRAdPE7lu7J4VLxQmpEU0vzVzJPbVg=s900-c-k-c0x00ffffff-no-rj" alt="Image 2">KCAL News</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream1/master_1080.m3u8" data-type="application/x-mpegURL"><img src="https://yt3.googleusercontent.com/ytc/AOPolaTP5GNWDzNeyiz_EM43o1MiIcs0Nx8mqVX0YnJt=s900-c-k-c0x00ffffff-no-rj" alt="Image 2">NBC4 News</li>
       <li data-src="https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/kabc_24x7_news.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDk-He9K3u9sYH4bG7cj2xLvdnAOsY5U9pX9I6IYQzzATqRyW7phV6oms3p29J3_Wcuuw&usqp=CAU" alt="Image 2">ABC7 News</li>
-      <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://yt3.googleusercontent.com/2rNT8npWDHaFE-R6P6-VieoVgknr-GoiNYwxI1jKhq9P4kxPi9wmHxELG3CMbKXWav8fIRbrNQ=s900-c-k-c0x00ffffff-no-rj" alt="Image 2">KTLA5 News</li>
-      <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://yt3.googleusercontent.com/1vzS5fBn9tYYbhmJhJoCN06D5ExLQm_wjkkso5P7zXgnQwbjfVnpkHzhSOy7_c33NKExD19D=s900-c-k-c0x00ffffff-no-rj" alt="Image 2">FOXLA News</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream6/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/profile_images/856417812478173184/fQpirsOG_400x400.jpg" alt="Image 1">Telemundo 52 News</li>
-      <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://play-lh.googleusercontent.com/yuWe2poz7J6FSTAbHqBAsnVvF5h4qQGhzv5bnCXtvuiau7ur0hYXLRqH-X9Y8I_KCAR5" alt="Image 1">Univison 34 News</li>
-      <li data-src="https://dai.google.com/linear/hls/pa/event/CvTZNYjrRC2HJU4io--aAA/stream/30a9ea1f-a08f-483e-808d-b3ab3eadaa4d:ATL/variant/7b5d890e573d368d32825e912f252d08/bandwidth/2965600.m3u8" data-type="application/x-mpegURL"><img src="https://www.noticiasnewswire.com/wp-content/uploads/2017/06/estrella-tv-logo-304x186-2-1-2-1-1.png" alt="Image 1">KRCA 62 News</li>
       <!-- Add more links here... -->
     </ul>
   </div>
   <div class="playlist-section">
-    <h2>Los Angeles Chopper Feed</h2>
+    <h2>LA Chopper Feed And More</h2>
     <ul id="playlist">
       <li data-src="https://example.com/path/to/your-file2.m3u8" data-type="application/x-mpegURL"><img src="https://static.livebooks.com/d9ed99b025a54018b61ed965c1adc6db/i/a39c619902c44cac9e7de46f2df60ca5/1/4SoifmQp7LJ6yDtMoKaua/Fox_C0350.jpg" alt="Image 2">Fox/KCAL</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream5/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://ots.nbcwpshield.com/wp-content/uploads/2019/09/03-25-2015-NEWSCHOPPER4_1.jpg?fit=1270%2C766" alt="Image 1">NBC4 Chopper Main</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream2/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://ots.nbcwpshield.com/wp-content/uploads/2019/09/03-25-2015-NEWSCHOPPER4_7.jpg?fit=1270%2C766" alt="Image 1">NBC4 Chopper Second</li>
       <li data-src="https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/KABCLive2.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/media/EHDGAAeUUAU06BX.jpg:large" alt="Image 1">Air7HD</li>
+      <li class="sub-section-title">Other News Feeds</li>
+      <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream3/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjV-FAho-K1kLCdOhViArH-FeQizRdQbztBXRSQe9wnMbT0GReHaX6ee3yPRTTWwhizAE&usqp=CAU" alt="Image 1">NBC4 Feed 3</li>
+      <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream4/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjV-FAho-K1kLCdOhViArH-FeQizRdQbztBXRSQe9wnMbT0GReHaX6ee3yPRTTWwhizAE&usqp=CAU" alt="Image 1">NBC4 Feed 4</li>
+      <li data-src="https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/KABCLive1.m3u8" data-type="application/x-mpegURL"><img src="https://cdn.abcotv.com/googleassistant/logos/KABC.png" alt="Image 1">ABC7 Breaking 1</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039047/CNNNewsource1/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 1</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039049/CNNNewsource2/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 2</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039050/CNNNewsource3/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 3</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039051/CNNNewsource4/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 4</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039052/CNNNewsource5/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 5</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039053/CNNNewsource6/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 6</li>
+      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039054/CNNNewsource7/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 7</li>
     </ul>
   </div>
   <div class="playlist-section">
     <h2>Los Angeles Cams/Orange County</h2>
     <ul id="playlist">
       <li class="sub-section-title">Los Angeles Views</li>
-      <li data-src="https://wowza.hollywoodsign.org/hollywoodsignlower/lower.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg/800px-Hollywood_Sign_%28Zuschnitt%29.jpg" alt="Image 2">Hollywood Sign Cam 1 </li>
-      <li data-src="https://wowza.hollywoodsign.org/hollywoodsignupper/upper.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/images/2022-12/hollywood-sign-behind.jpg?width=1920&fit=bound&quality=72&auto=webp" alt="Image 2">Hollywood Sign Cam 2</li>
+      <li data-src="https://wowza.hollywoodsign.org/hollywoodsignlower/lower.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg/800px-Hollywood_Sign_%28Zuschnitt%29.jpg" alt="Image 2">Hollywood Sign Lower Cam</li>
+      <li data-src="https://wowza.hollywoodsign.org/hollywoodsignupper/upper.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.discoverlosangeles.com/sites/default/files/images/2022-12/hollywood-sign-behind.jpg?width=1920&fit=bound&quality=72&auto=webp" alt="Image 2">Hollywood Sign Upper Cam</li>
       <li data-src="https://dacastmmd.mmdlive.lldns.net/dacastmmd/d0170b07865a4ec285ea3a4a874d14af/chunklist_b732000.m3u8" data-type="application/x-mpegURL"><img src="https://la.urbanize.city/sites/default/files/styles/1140w/public/2023-08/bending%20the%20river%20back%20into%20the%20city%206_0.JPG?itok=0zHqGAuU" alt="Image 1">Live LA River Bending Cam</li>
       <li class="sub-section-title">Beaches</li>
       <li data-src="https://cdn3.wowza.com/5/RE0wRFRDK05SMVF6/California/laoverview.stream/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRyy-jdEb2ncoIy2nyHmR4qRGmfwuvpKOHw&usqp=CAU" alt="Image 2">Los Angeles Beach Cam</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-santamonican/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475937-Santa-Monica-Beach.jpg" alt="Image 1">Santa Monica Beach North Cam</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-santamonicapier/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.visittheusa.com/sites/default/files/styles/16_9_1280x720/public/2022-03/3a1f69f332d8f3313ce28bd128279d77.jpeg?h=bcf9f3f0&itok=rzQvhSqj" alt="Image 1">Santa Monica Pier</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-bayst/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.tclf.org/sites/default/files/styles/full_width/public/thumbnails/image/CA_SantaMonica_BayStreetBeachHistoricDistrict_courtesyTheSeaOfCloudsProject_001_sig_006_0.jpg?itok=zllyev6e" alt="Image 1">Bay St</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-santamonicas/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbc48XBiXqxuskBuN9Z_z0ujJUtNoUc8D8KQ&usqp=CAU" alt="Image 1">Santa Monica Beach South</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venicebeachclose/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2014/09/bigstock-LOS-ANGELES-CALIFORNIA-June-67456147-Large.jpg" alt="Image 1">Venice Breakwater Close-Up</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venicebreakwater/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://upload.travelawaits.com/ta/uploads/2023/07/venice-beach-ca-800x800.jpg" alt="Image 1">Venice Breakwater</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venicessov/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/FVhJTkMd-GdADU9EC8kaLWwPhZM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-513874169-798267fc09444cbc99810a761bc0c9d9.jpg" alt="Image 1">Venice Southside Overview</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venicepierss/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2014/09/bigs-Sunset-at-Venice-Beach-Pier-72752938-Large-e1486590988101.jpg" alt="Image 1">Venice Pier, Southside</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venicepierns/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1200/public/VC_BestPiers_Module2_VenicePier_Stock_RF_g0xc42_1280x640.jpg?itok=l5a5QKUB" alt="Image 1">Venice Pier, Northside</li>
       <li data-src="https://5ddd47d64e730.streamlock.net:444/westland/westland.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1000/public/VC_California101_VeniceBeach_Stock_RF_638340372_1280x640.jpg?itok=50tR-rTR" alt="Image 2">Venice Beach Cam 1</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/innocean/innocean.stream/chunklist_w815118782.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2016/06/downtown-huntington-beach.jpg" alt="Image 2">Huntington Beach Overview</li>
       <li data-src="https://cs7.pixelcaster.com/live/hbsouth.stream/chunks.m3u8" data-type="application/x-mpegURL"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_716,q_80,w_639/v1/clients/surfcityusa-redesign/Mike_Marshall_Pier_Sunset_2aac8d84-7bed-433c-bdce-3ecc7d6cfc43.jpg" alt="Image 2">Huntington Beach South Of pier</li>
@@ -220,7 +238,13 @@
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venturapointnorth/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.dailynews.com/wp-content/uploads/2022/08/LDN-L-VENTURA-FAIR-0803-08.jpg?w=620" alt="Image 1">Ventura Point North Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-venturapoint/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://visitventuraca.com/wp-content/uploads/2021/06/51136891025_a9f88b8012_k.jpg" alt="Image 1">Ventura Point Cam</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/swellmagnet_hermosa-fixed_south.stream/chunklist_w1678840715.m3u8" data-type="application/x-mpegURL"><img src="https://growthzonesitesprod.azureedge.net/wp-content/uploads/sites/1262/2021/11/F-FIESTA-DRONE_fiesta2021-1024x767.jpg" alt="Image 1">Hermosa Beach Cam</li>
+      <li data-src=" https://cams.cdn-surfline.com/cdn-wc/wc-hermosabeachnorth/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/0Exv7ePoUP2S5sJvVmU8DAAyPR0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HermosaBeach-1e70b76363ef47be90bf009336e6e10f.jpg" alt="Image 1">Hermosa Beach Cam 2</li>
       <li data-src="https://edge07.nginx.hdontap.com/hosb1/swellmagnet_elporto_strand-static.stream/chunklist_w847500545.m3u8" data-type="application/x-mpegURL"><img src="https://spot-thumbnails.cdn-surfline.com/spots/5842041f4e65fad6a7708900/5842041f4e65fad6a7708900_1500.jpg" alt="Image 1">El Porto Manhattan Beach Cam</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-elporto39th/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://southerncaliforniabeaches.org/img/elporto1.JPG" alt="Image 1">El Porto 39th St</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-elporto41st/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://southerncaliforniabeaches.org/img/manhattanbeach18.JPG" alt="Image 1">El Porto 41st St.</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-elporto42nd/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbLDVBIPN2f3hHOVNPe6CHDRxNru-5bL-10gK8jeFS7--iidQr52xwVNvsqLB-1dTUQo&usqp=CAU" alt="Image 1">El Porto 42nd St.</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-elporto43rd/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.dailybreeze.com/wp-content/uploads/2021/08/TDB-L-HISTORY-COL-0831-02.jpg?w=620" alt="Image 1">El Porto 43rd St.</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-elportoov/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://alchetron.com/cdn/el-porto-beach-63da5f85-1836-431b-a0bf-0c03bb5564c-resize-750.jpeg" alt="Image 1">El Porto Overview</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-willrogers/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiasbestbeaches.com/photos8/will_rogers_beach_volleyball.jpg" alt="Image 1">Will Rogers State Beach Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-willrogersnorth/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://beaches.lacounty.gov/wp-content/uploads/2016/10/Will_Rogers_Beach_5.jpg" alt="Image 1">Will Rogers State Beach North Cam</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-sunsetpointca/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://www.californiabeaches.com/wp-content/uploads/2014/09/IMG_3954-1000x666.jpg" alt="Image 1">Sunset Point Cam</li>
@@ -235,6 +259,11 @@
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-leocarrillosb/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://images.fineartamerica.com/images-medium-large-5/sunset-over-leo-carillo-state-beach-tim-fitzharris.jpg" alt="Image 1">Leo Carrillo Cam</li>
       <li data-src="https://edge01.london.nginx.hdontap.com/hosb1/fulkra_monarch_resort_beach.stream/chunklist_w245457793.m3u8" data-type="application/x-mpegURL"><img src="https://www.monarchbeachgolf.com/wp-content/uploads/sites/8904/2023/06/signup3.jpg?w=1024" alt="Image 1">Monarch Beach Cam</li>
       <li data-src="https://edge01.london.nginx.hdontap.com/hosb1/easton_el-porto-overlook_panoramic.stream/chunklist_w702187909.m3u8" data-type="application/x-mpegURL"><img src="https://www.besthotels.co/content/images/2021/06/Best-Hotels-in-Manhattan-Beach.jpg" alt="Image 1">Manhattan Beach Cam</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-manhattanpierss/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://photostorage.explorest.com/usa/california/tnguyen-manhattan-feed.jpg" alt="Image 1">Manhattan Pier Southside</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-manhattanpierns/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://media.timeout.com/images/103083764/image.jpg" alt="Image 1">Manhattan Pier Northside</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-sealbeachssov/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://patch.com/img/cdn20/shutterstock/24797168/20220513/080226/styles/patch_image/public/shutterstock-646308592___13200107238.jpg" alt="Image 1">Seal Beach Pier Overview</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-sealbeachss/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://images.fineartamerica.com/images-medium-large-5/the-pier-in-seal-beach-susangaryphotography.jpg" alt="Image 1">Seal Beach Pier Southside</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-brucesbeach/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://media.cntraveler.com/photos/607f22f211601c3fd89ad910/16:9/w_2560,c_limit/1232022912" alt="Image 1">Bruce's Beach </li>
       <li class="sub-section-title">Amusement Parks</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts2.stream/chunklist_w1507955537.m3u8" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/_5H-nke7fot6GN4hB3KMYWltc9g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KnottsBerryFarminCalifornia-8acc048bdf8744fd86ce3f905ad75ad6.jpg" alt="Image 2">Knotts Berry Farm Cam 1</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts1.stream/chunklist_w499315738.m3u8" data-type="application/x-mpegURL"><img src="https://employeenetwork.com/wp-content/uploads/2022/07/knottsdisplaypage2022.png" alt="Image 2">Knotts Berry Farm Cam 2</li>
@@ -247,14 +276,6 @@
       <li data-src="https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccp3ohqSz_SUKUlN7KDbE0QFFDrC0D-0RQg&usqp=CAU" alt="Image 1">69BRAVO Live Cam 2</li>
       <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://live.staticflickr.com/354/19518914024_24f80015b8_n.jpg" alt="Image 1">69BRAVO Live Cam 3</li>
       <li data-src="https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://i.vimeocdn.com/video/1360526561-d3501a49dbad318d027138b3a5e8cb209aff20298f14a296a1e700452b9b2939-d_640" alt="Image 1">69BRAVO Live Cam 4</li>
-      <li class="sub-section-title">CNN Newsource Feed</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039047/CNNNewsource1/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 1</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039049/CNNNewsource2/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 2</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039050/CNNNewsource3/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 3</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039051/CNNNewsource4/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 4</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039052/CNNNewsource5/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 5</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039053/CNNNewsource6/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 6</li>
-      <li data-src="https://newsource-live.warnermediacdn.com/hls/live/2039054/CNNNewsource7/VIDEO_0_8128000.m3u8" data-type="application/x-mpegURL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="Image 1">CNN Newsource 7</li>
       <li class="sub-section-title">Misc</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-hecuba.stream/chunklist_w1296265921.m3u8" data-type="application/x-mpegURL"><img src="https://us.123rf.com/450wm/kitleong/kitleong1710/kitleong171000571/87088553-los-angeles-oct-8-afternoon-view-of-the-beautiful-hecuba-queen-of-troy-of-usc-village-on-oct-8.jpg?ver=6" alt="Image 2">USC Hecuba Cam</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-tommy.stream/chunklist_w215605669.m3u8" data-type="application/x-mpegURL"><img src="https://d3jycsk0m72ya7.cloudfront.net/images/2019/5/8/usc_trojan_tommy_trojan_statue.jpg" alt="Image 2">USC Tommy Cam</li>
