@@ -130,7 +130,7 @@
     <div class="m3u8-url-box">
       <label for="m3u8-url">m3u8 URL:</label>
       <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
-      <button id="copy-button" class="custom-button">Copy URL</button>
+      <button id="copy-button" class="custom-button">Copy M3U8</button>
       <!-- Add the checkbox button with the checked attribute -->
       <label for="mute-checkbox">Mute</label>
       <input type="checkbox" id="mute-checkbox" checked>
@@ -264,6 +264,11 @@
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-sealbeachssov/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://patch.com/img/cdn20/shutterstock/24797168/20220513/080226/styles/patch_image/public/shutterstock-646308592___13200107238.jpg" alt="Image 1">Seal Beach Pier Overview</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-sealbeachss/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://images.fineartamerica.com/images-medium-large-5/the-pier-in-seal-beach-susangaryphotography.jpg" alt="Image 1">Seal Beach Pier Southside</li>
       <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-brucesbeach/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://media.cntraveler.com/photos/607f22f211601c3fd89ad910/16:9/w_2560,c_limit/1232022912" alt="Image 1">Bruce's Beach </li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-redondobreak/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://spot-thumbnails.cdn-surfline.com/spots/5842041f4e65fad6a7708900/5842041f4e65fad6a7708900_1500.jpg" alt="Image 1">Redondo Breakwater</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-sapphire/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://gerilewis.files.wordpress.com/2015/06/10303877_433723740100046_8777787618433692352_n.jpg" alt="Image 1">Sapphire St</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-knobhill/chunklist.m3u8" data-type="application/x-mpegURL"><img src="https://fastly.4sqi.net/img/general/600x600/130523_eyPOc8-EbXLyMwZFEEFBzZw_SovIMDQ0sUVYGRj3YcE.jpg" alt="Image 1">Knob Hill</li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-torrancebeach/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/4a/74/78/top-of-the-ramp-looking.jpg?w=1200&h=-1&s=1" alt="Image 1">Torrance Beach </li>
+      <li data-src="https://cams.cdn-surfline.com/cdn-wc/wc-torrance/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://spot-thumbnails.cdn-surfline.com/spots/5842041f4e65fad6a770892c/5842041f4e65fad6a770892c_1500.jpg" alt="Image 1">Haggerty's </li>
       <li class="sub-section-title">Amusement Parks</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts2.stream/chunklist_w1507955537.m3u8" data-type="application/x-mpegURL"><img src="https://www.tripsavvy.com/thmb/_5H-nke7fot6GN4hB3KMYWltc9g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KnottsBerryFarminCalifornia-8acc048bdf8744fd86ce3f905ad75ad6.jpg" alt="Image 2">Knotts Berry Farm Cam 1</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/knotts1.stream/chunklist_w499315738.m3u8" data-type="application/x-mpegURL"><img src="https://employeenetwork.com/wp-content/uploads/2022/07/knottsdisplaypage2022.png" alt="Image 2">Knotts Berry Farm Cam 2</li>
@@ -399,7 +404,7 @@
       m3u8UrlTextbox.select();
       document.execCommand('copy');
       // You can provide feedback to the user here, such as displaying a message
-      alert('M3U8 URL copied to clipboard');
+      alert('M3U8 Has Been Copied Copy And Paste M3U8 Link To Vidgrid');
     }
 
     // Attach click event listener to the copy button
@@ -412,13 +417,6 @@
     const copyButton = document.getElementById('copy-button');
     const m3u8UrlTextbox = document.getElementById('m3u8-url');
     const muteCheckbox = document.getElementById('mute-checkbox'); // Get the checkbox element
-
-    // Function to copy the M3U8 URL to the clipboard
-    function copyM3U8Url() {
-      m3u8UrlTextbox.select();
-      document.execCommand('copy');
-      alert('M3U8 URL copied to clipboard');
-    }
 
     // Function to toggle mute/unmute based on checkbox state
     function toggleMute() {
