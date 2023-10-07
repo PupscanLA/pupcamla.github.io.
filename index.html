@@ -427,6 +427,14 @@
       }
     }
 
+    // Function to copy the M3U8 URL to the clipboard
+    function copyM3U8Url() {
+      m3u8UrlTextbox.select();
+      document.execCommand('copy');
+      // You can provide feedback to the user here, such as displaying a message
+      alert('M3U8 Has Been Copied Copy And Paste M3U8 Link To Vidgrid');
+    }
+
     // Attach click event listeners to the copy button and the checkbox
     copyButton.addEventListener('click', copyM3U8Url);
     muteCheckbox.addEventListener('change', toggleMute); // Listen for checkbox changes
