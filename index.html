@@ -187,6 +187,7 @@
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream1/master_1080.m3u8" data-type="application/x-mpegURL"><img src="https://yt3.googleusercontent.com/ytc/AOPolaTP5GNWDzNeyiz_EM43o1MiIcs0Nx8mqVX0YnJt=s900-c-k-c0x00ffffff-no-rj" alt="Image 2">NBC4 News</li>
       <li data-src="https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/kabc_24x7_news.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDk-He9K3u9sYH4bG7cj2xLvdnAOsY5U9pX9I6IYQzzATqRyW7phV6oms3p29J3_Wcuuw&usqp=CAU" alt="Image 2">ABC7 News</li>
       <li data-src="https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream6/master_720.m3u8" data-type="application/x-mpegURL"><img src="https://pbs.twimg.com/profile_images/856417812478173184/fQpirsOG_400x400.jpg" alt="Image 1">Telemundo 52 News</li>
+      <li data-src="https://dai.google.com/linear/hls/event/RjvF1cd0Qx-65Dz14THpPA/master.m3u8" data-type="application/x-mpegURL"><img src="https://www.cbsnews.com/assets/live_icons/flyout-live-car-chase@2x.png" alt="Image 1">Car Chase</li>
       <!-- Add more links here... -->
     </ul>
   </div>
@@ -286,6 +287,11 @@
       <li data-src="https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccp3ohqSz_SUKUlN7KDbE0QFFDrC0D-0RQg&usqp=CAU" alt="Image 1">69BRAVO Live Cam 2</li>
       <li data-src="https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://live.staticflickr.com/354/19518914024_24f80015b8_n.jpg" alt="Image 1">69BRAVO Live Cam 3</li>
       <li data-src="https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8" data-type="application/x-mpegURL"><img src="https://i.vimeocdn.com/video/1360526561-d3501a49dbad318d027138b3a5e8cb209aff20298f14a296a1e700452b9b2939-d_640" alt="Image 1">69BRAVO Live Cam 4</li>
+      <li class="sub-section-title">Fwy Cams</li>
+      <li data-src="https://wzmedia.dot.ca.gov/D12/SB5SOArtesia.stream/chunklist_w1703179008.m3u8" data-type="application/x-mpegURL"><img src="png" alt="Image 1">Sb 5 Fwy At Artesia Blvd</li>
+      <li data-src="https://wzmedia.dot.ca.gov/D12/NB5NOBeachBlvd.stream/chunklist_w1690698004.m3u8" data-type="application/x-mpegURL"><img src="png" alt="Image 1">Nb 5 Fwy At Beach Blvd</li>
+      <li data-src="https://wzmedia.dot.ca.gov/D12/NB5Manchester.stream/chunklist_w953823340.m3u8" data-type="application/x-mpegURL"><img src="png" alt="Image 1">Nb 5 Fwy At Manchester Ave</li>
+      <li data-src="https://wzmedia.dot.ca.gov/D12/NB5NOOrangeThorpe.stream/chunklist_w1979826068.m3u8" data-type="application/x-mpegURL"><img src="png" alt="Image 1">Nb 5 Fwy At Orangethorpe Blvd</li>
       <li class="sub-section-title">Misc</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-hecuba.stream/chunklist_w1296265921.m3u8" data-type="application/x-mpegURL"><img src="https://us.123rf.com/450wm/kitleong/kitleong1710/kitleong171000571/87088553-los-angeles-oct-8-afternoon-view-of-the-beautiful-hecuba-queen-of-troy-of-usc-village-on-oct-8.jpg?ver=6" alt="Image 2">USC Hecuba Cam</li>
       <li data-src="https://56cf3370d8dd3.streamlock.net:1935/live/usc-tommy.stream/chunklist_w215605669.m3u8" data-type="application/x-mpegURL"><img src="https://d3jycsk0m72ya7.cloudfront.net/images/2019/5/8/usc_trojan_tommy_trojan_statue.jpg" alt="Image 2">USC Tommy Cam</li>
@@ -404,13 +410,6 @@
     const copyButton = document.getElementById('copy-button');
     const m3u8UrlTextbox = document.getElementById('m3u8-url');
 
-    // Function to copy the M3U8 URL to the clipboard
-    function copyM3U8Url() {
-      m3u8UrlTextbox.select();
-      document.execCommand('copy');
-      // You can provide feedback to the user here, such as displaying a message
-      alert('M3U8 Has Been Copied Copy And Paste M3U8 Link To Vidgrid');
-    }
 
     // Attach click event listener to the copy button
     copyButton.addEventListener('click', copyM3U8Url);
