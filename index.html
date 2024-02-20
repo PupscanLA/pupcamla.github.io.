@@ -6,6 +6,7 @@
   <title>PupcamLA</title>
   <link href="https://vjs.zencdn.net/7.18.0/video-js.css" rel="stylesheet">
   <script src="https://vjs.zencdn.net/7.18.0/video.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-snapshot/0.1.0/videojs-snapshot.min.js"></script>
   <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1594844810484908032/-CD4KOqR_200x200.jpg" type="image/x-icon">
   <style>
     body {
@@ -131,6 +132,7 @@
       <label for="m3u8-url">m3u8 URL:</label>
       <textarea id="m3u8-url" rows="1" cols="100" readonly></textarea>
       <button id="copy-button" class="custom-button">Copy M3U8</button>
+      <button onclick="takeSnapshot('video-player')"class="custom-button">Snapshot</button>
       <!-- Add the checkbox button with the checked attribute -->
       <label for="mute-checkbox">Mute</label>
       <input type="checkbox" id="mute-checkbox" checked>
@@ -464,4 +466,31 @@
     // Initially set the player to muted based on the checkbox state
     toggleMute();
   });
+</script>
+
+<script>
+  // Function to take snapshot
+  function takeSnapshot(playerId) {
+    var player = document.getElementById(playerId);
+    var canvas = document.createElement('canvas');
+    var video = player.querySelector('video');
+    
+    // Set canvas dimensions to match the video element
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    // Convert the canvas to a data URL representing a JPEG image
+    var snapshotUrl = canvas.toDataURL('image/jpeg');
+    
+    // Create a temporary anchor element to trigger the download
+    var link = document.createElement('a');
+    link.href = snapshotUrl;
+    link.download = 'snapshot.jpg'; // Set the filename for the downloaded image
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 </script>
