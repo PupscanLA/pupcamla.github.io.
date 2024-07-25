@@ -122,12 +122,37 @@
     .custom-button:hover {
       background-color: #69a0f1; /* Change to the hover background color you prefer */
     }
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav-button {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #69a0f1;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Ensure the link behaves like a block-level element */
+}
+
+.nav-button:hover {
+  background-color: #3366cc;
+}
+
   </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index2.html">Monitor Feeds</a></li>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index2.html" class="nav-button">Monitor Feeds</a></li>
      <!-- Link to the About page -->
             <!-- Add more links as needed -->
         </ul>
