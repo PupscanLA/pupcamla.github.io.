@@ -59,15 +59,9 @@ body {
 }
 .listEast {
 }
-.listSinclair {
-}
-.listGraham {
-}
 .listYoutube {
 }
 .listWebcam {
-}
-.listCBStest {
 }
 .showList {
 	display: block;
@@ -262,49 +256,21 @@ body {
 .hdrNational {
 	line-height: 30px;
 	height: 30px;
-    width: 25%;
-    padding: 2px 0;
-    cursor: pointer;
-}
-.hdrMyBTV {
-	line-height: 30px;
-	height: 30px;
-    width: 20%;
-    padding: 2px 0;
-    cursor: pointer;
-}
-.hdrSinclair {
-	line-height: 30px;
-	height: 30px;
-	width: 25%;
-    padding: 2px 0;
-    cursor: pointer;
-}
-.hdrGraham {
-	line-height: 30px;
-	height: 30px;
-	width: 35%;
+    width: 33%;
     padding: 2px 0;
     cursor: pointer;
 }
 .hdrWebcam {
 	line-height: 30px;
 	height: 30px;
-	width: 33%;
+    width: 33%;
     padding: 2px 0;
     cursor: pointer;
 }
 .hdrYoutube {
 	line-height: 30px;
 	height: 30px;
-	width: 34%;
-    padding: 2px 0;
-    cursor: pointer;
-}
-.hdrCBStest {
-	line-height: 30px;
-	height: 30px;
-	width: 33%;
+    width: 33%;
     padding: 2px 0;
     cursor: pointer;
 }
@@ -358,8 +324,7 @@ body {
 	</div>
 	<div id="main">
 		<span id="left">
-			<span id="row3"><div class="hdrYoutube disabledHeader">YouTube</div><div class="hdrWebcam disabledHeader">Web Cams</div><div class="hdrCBStest disabledHeader">CBS Test</div></span>
-			<span id="row2"><div class="hdrNational disabledHeader">National</div><div class="hdrMyBTV disabledHeader">Soon</div><div class="hdrSinclair disabledHeader">Sinclair</div><div class="hdrGraham disabledHeader">Graham Digital</div></span>
+			<span id="row2"><div class="hdrNational disabledHeader">National</div><div class="hdrYoutube disabledHeader">YouTube</div><div class="hdrWebcam disabledHeader">Web Cams</div></span>
 			<span id="row1"><div class="hdrWest enabledHeader">U.S. West</div><div class="hdrMidwest disabledHeader">U.S. Mid</div><div class="hdrEast disabledHeader">U.S. East</div></span>
 			<div class="listWest divList showList">
 				<div id="la" class="marketDiv marketOdd"><span class="marketHeader">Los Angeles</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
@@ -396,11 +361,8 @@ body {
 			<div class="listNational divList hideList">
 				<div id="nat" class="marketDiv marketOdd"><span class="marketHeader">National Feeds</span></div>
 			</div>
-			<div class="listMyBTV divList hideList">
-				<div id="mybtv" class="marketDiv marketOdd"><span class="marketHeader">Coming Soon</span></div>
-			</div>
 			<div id="sincFixed" class="marketOdd hideList" style="padding-top: 10px;">
-				<span class="marketHeader marketOdd">Sinclair Stations</span><span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 50%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:340px;margin-left: -170px;">Sinclair Broadcast Group owns over<br/>190 TV stations across the U.S.<br/>Instead of listing all the stations that have news operations, you can query by 'News'(broadcasts) or 'Events'(live events such as remote reporting, news conferences, or other unscheduled live news events), or 'All'(both 'News' & 'Events').<br/>Feeds returned should(though not always) have live content at that time.<br/>Note: Sinclair is heavily 'Conservative', especially their own produced 'news' shows.</span></span></span><span style="display: flex;">
+				<span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 50%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:340px;margin-left: -170px;">Sinclair Broadcast Group owns over<br/>190 TV stations across the U.S.<br/>Instead of listing all the stations that have news operations, you can query by 'News'(broadcasts) or 'Events'(live events such as remote reporting, news conferences, or other unscheduled live news events), or 'All'(both 'News' & 'Events').<br/>Feeds returned should(though not always) have live content at that time.<br/>Note: Sinclair is heavily 'Conservative', especially their own produced 'news' shows.</span></span></span><span style="display: flex;">
 					<button id="sinclairAll" class="flatBtn" style="width: 70px;margin-left: auto;">All</button>
 					<button id="sinclairNews" class="flatBtn" style="width: 70px;margin: 4px 20px;">News</button>
 					<button id="sinclairEvents" class="flatBtn" style="width: 70px;margin-right: auto;">Events</button>
@@ -411,7 +373,7 @@ body {
 				<div id="sinc" class="marketDiv marketOdd"></div>
 			</div>
 			<div id="gramFixed" class="marketOdd hideList" style="padding-top: 10px;height: 50px;">
-				<span class="marketHeader marketOdd">GMG Feeds</span><span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 50%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:280px;margin-left: -140px;">Graham Media Group owns<br/>7 TV stations, in 4 states.<br/>These are feeds that they share.</br>The titles originate from them.</span></span></span>
+				</span><span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 50%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:280px;margin-left: -140px;">Graham Media Group owns<br/>7 TV stations, in 4 states.<br/>These are feeds that they share.</br>The titles originate from them.</span></span></span>
 				<button id="refreshGD" class="flatBtn" style="margin: 0 25px;float: right;">Refresh</button>
 			</div>			
 			<div class="listGraham divList hideList">
@@ -726,8 +688,6 @@ function fetchSinclair(scope){
 }
 // Sinclair End
 
-// Graham Start
-//<span class="marketHeader">Graham Digital Feeds<button id="refreshGD" class="flatBtn" style="width: 70px;margin-top: 0;float:right;">Refresh</button></span>
 function buildGraham(){
 	$('#gdList').empty();
 	var title,shortTitle,playUrl,gotoUrl,callsign,id,bg;
@@ -1089,44 +1049,6 @@ $(document).on("click", ".hdrNational", {}, function(jNode){
 	}
 });
 
-$(document).on("click", ".hdrMyBTV", {}, function(jNode){
-	$('.showList').addClass('hideList').removeClass('showList');
-	$('.enabledHeader').addClass('disabledHeader').removeClass('enabledHeader');
-	$(this).removeClass('disabledHeader');
-	$(this).addClass('enabledHeader');
-	$('.listMyBTV').addClass('showList').removeClass('hideList');
-	if($(this).parent().not(':last-child')){
-		$('#row3').prependTo('#left');
-		$('#row1').prependTo('#left');
-	}
-});
-
-$(document).on("click", ".hdrSinclair", {}, function(jNode){
-	$('.showList').addClass('hideList').removeClass('showList');
-	$('.enabledHeader').addClass('disabledHeader').removeClass('enabledHeader');
-	$(this).removeClass('disabledHeader');
-	$(this).addClass('enabledHeader');
-	$('.listSinclair').addClass('showList').removeClass('hideList');
-	$('#sincFixed').addClass('showList').removeClass('hideList');
-	if($(this).parent().not(':last-child')){
-		$('#row3').prependTo('#left');
-		$('#row1').prependTo('#left');
-	}
-});
-
-$(document).on("click", ".hdrGraham", {}, function(jNode){
-	$('.showList').addClass('hideList').removeClass('showList');
-	$('.enabledHeader').addClass('disabledHeader').removeClass('enabledHeader');
-	$(this).removeClass('disabledHeader');
-	$(this).addClass('enabledHeader');
-	$('.listGraham').addClass('showList').removeClass('hideList');
-	$('#gramFixed').addClass('showList').removeClass('hideList');
-	if($(this).parent().not(':last-child')){
-		$('#row3').prependTo('#left');
-		$('#row1').prependTo('#left');
-	}
-});
-
 $(document).on("click", ".hdrYoutube", {}, function(jNode){
 	$('.showList').addClass('hideList').removeClass('showList');
 	$('.enabledHeader').addClass('disabledHeader').removeClass('enabledHeader');
@@ -1135,8 +1057,8 @@ $(document).on("click", ".hdrYoutube", {}, function(jNode){
 	$('.listYoutube').addClass('showList').removeClass('hideList');
 	//$('#webcamFixed').addClass('showList').removeClass('hideList');
 	if($(this).parent().not(':last-child')){
+		$('#row3').prependTo('#left');
 		$('#row1').prependTo('#left');
-		$('#row2').prependTo('#left');
 	}
 });
 
@@ -1148,23 +1070,11 @@ $(document).on("click", ".hdrWebcam", {}, function(jNode){
 	$('.listWebcam').addClass('showList').removeClass('hideList');
 	//$('#webcamFixed').addClass('showList').removeClass('hideList');
 	if($(this).parent().not(':last-child')){
+		$('#row3').prependTo('#left');
 		$('#row1').prependTo('#left');
-		$('#row2').prependTo('#left');
 	}
 });
 
-$(document).on("click", ".hdrCBStest", {}, function(jNode){
-	$('.showList').addClass('hideList').removeClass('showList');
-	$('.enabledHeader').addClass('disabledHeader').removeClass('enabledHeader');
-	$(this).removeClass('disabledHeader');
-	$(this).addClass('enabledHeader');
-	$('.listCBStest').addClass('showList').removeClass('hideList');
-	//$('#webcamFixed').addClass('showList').removeClass('hideList');
-	if($(this).parent().not(':last-child')){
-		$('#row1').prependTo('#left');
-		$('#row2').prependTo('#left');
-	}
-});
 
 $(document).on("click", "#sinclairAll", {}, function(jNode){
 	fetchSinclair('all');
@@ -10659,84 +10569,11 @@ let items = [{
 }, //	{id:"SNCR7",dynamic:"false",city:"nat",net:"news",call:"Sinclair",station:"Sinclair N8 Feed 1",url:"https://content.uplynk.com/channel/e56ba52a1b9d45ad8c8a033fd83fe480.m3u8",referer:"https://wjla.com/watch",origin:"https://wjla.com/watch",length:"0",fb:"",helo:""},
 //	{id:"SNCR8",dynamic:"false",city:"nat",net:"news",call:"Sinclair",station:"Sinclair N8 Feed 2",url:"https://content.uplynk.com/channel/f0435664817c4673adc60f4647554840.m3u8",referer:"https://wjla.com/watch",origin:"https://wjla.com/watch",length:"0",fb:"",helo:""},
 {
-    id: "VERZ1",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "Verizon",
-    station: "Verizon Digital Media Services",
-    url: "https://content.uplynk.com/channel/f38359db9de14d0884f32e36756988d8.m3u8",
-    referer: "https://news.google.com/",
-    origin: "https://news.google.com/",
-    length: "0",
-    fb: "",
-    helo: ""
-}, {
-    id: "VERZ2",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "Verizon",
-    station: "Verizon Digital Media Services",
-    url: "https://content.uplynk.com/channel/246501a276064de9aecc345e8a6db84c.m3u8",
-    referer: "https://news.google.com/",
-    origin: "https://news.google.com/",
-    length: "0",
-    fb: "",
-    helo: ""
-}, {
-    id: "VERZ3",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "Verizon",
-    station: "Verizon Digital Media Services",
-    url: "https://content.uplynk.com/channel/a1fe37083d5f4e2ca39cf04b72278a5e.m3u8",
-    referer: "https://news.google.com/",
-    origin: "https://news.google.com/",
-    length: "0",
-    fb: "",
-    helo: ""
-}, {
-    id: "VERZ4",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "Verizon",
-    station: "Verizon Digital Media Services",
-    url: "https://content.uplynk.com/channel/d8ebf84aa99d430980a7995d658ece0a.m3u8",
-    referer: "https://news.google.com/",
-    origin: "https://news.google.com/",
-    length: "0",
-    fb: "",
-    helo: ""
-}, {
-    id: "VERZ5",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "Verizon",
-    station: "Verizon Digital Media Services",
-    url: "https://content.uplynk.com/channel/edcc7b94bf074eaf8df9fc6454b0086b.m3u8",
-    referer: "https://news.google.com/",
-    origin: "https://news.google.com/",
-    length: "0",
-    fb: "",
+
     helo: ""
 }, //	{id:"VERZ6",dynamic:"false",city:"nat",net:"news",call:"Verizon",station:"WLEX 18",url:"https://content.uplynk.com/channel/9a71a7bf25f84c3abb31e3a0376b6b6f.m3u8",referer:"https://news.google.com/",origin:"https://news.google.com/",length:"0",fb:"",helo:""},
 {
-    id: "VERZ7",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "Verizon",
-    station: "Verizon Digital Media Services",
-    url: "https://content.uplynk.com/channel/71cd8cc602824ea6a8d987cd0c59b7b0.m3u8",
-    referer: "https://news.google.com/",
-    origin: "https://news.google.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, //	{id:"WAPO1",dynamic:"false",city:"nat",net:"news",call:"WaPo",station:"WaPo Events Feed",url:"https://d155hi8td9k2ns.cloudfront.net/out/wapo-medialive1-rtmp/live.m3u8",referer:"https://www.washingtonpost.com/video/",origin:"https://www.washingtonpost.com/video/",length:"0",fb:"",helo:""},
 //	{id:"WAPO2",dynamic:"false",city:"nat",net:"news",call:"WaPo",station:"WaPo Events Feed",url:"https://d155hi8td9k2ns.cloudfront.net/out/wapo-medialive2-rtmp/live.m3u8",referer:"https://www.washingtonpost.com/video/",origin:"https://www.washingtonpost.com/video/",length:"0",fb:"",helo:""},
 //	{id:"WAPO3",dynamic:"false",city:"nat",net:"news",call:"WaPo",station:"WaPo Events Feed",url:"https://d155hi8td9k2ns.cloudfront.net/out/wapo-medialive3-rtmp/live.m3u8",referer:"https://www.washingtonpost.com/video/",origin:"https://www.washingtonpost.com/video/",length:"0",fb:"",helo:""},
@@ -24766,9 +24603,9 @@ let items = [{
     dynamic: "false",
     city: "webcam",
     net: "webcam",
-    call: "name",
-    station: "name",
-    url: "m3u8",
+    call: "venice beach",
+    station: "Venice Pier, Northside",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-venicepierns/chunklist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24777,9 +24614,9 @@ let items = [{
     dynamic: "false",
     city: "webcam",
     net: "webcam",
-    call: "name",
-    station: "name",
-    url: "m3u8",
+    call: "Venice Beach",
+    station: "Venice Beach Cam 1",
+    url: "https://5ddd47d64e730.streamlock.net:444/westland/westland.stream/playlist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24788,9 +24625,9 @@ let items = [{
     dynamic: "false",
     city: "webcam",
     net: "webcam",
-    call: "name",
-    station: "name",
-    url: "m3u8",
+    call: "Ventura",
+    station: "Ventura Harbor Cam 1",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-venturaharbor/playlist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24799,9 +24636,9 @@ let items = [{
     dynamic: "false",
     city: "webcam",
     net: "webcam",
-    call: "name",
-    station: "name",
-    url: "m3u8",
+    call: "Ventura",
+    station: "Ventura Point Overview Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-venturapointov/playlist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24810,9 +24647,416 @@ let items = [{
     dynamic: "false",
     city: "webcam",
     net: "webcam",
-    call: "name",
-    station: "name",
-    url: "m3u8",
+    call: "Ventura",
+    station: "Ventura Point Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-venturapoint/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "C St",
+    station: "C St.Surf Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-cstreetov/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Hermosa Beach",
+    station: "Hermosa Beach Cam",
+    url: " https://cams.cdn-surfline.com/cdn-wc/wc-hermosabeachnorth/chunklist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "El Porto",
+    station: "El Porto 39th St",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-elporto39th/chunklist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "El Porto",
+    station: "El Porto 41st St.",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-elporto41st/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "El Porto",
+    station: "El Porto 42nd St",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-elporto42nd/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "El Porto",
+    station: "El Porto 43nd St",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-elporto43rd/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "El Porto",
+    station: "El Porto Overview",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-elportoov/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Will Rogers State Beach",
+    station: "Will Rogers State Beach Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-willrogers/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Will Rogers State Beach",
+    station: "Will Rogers State Beach North Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-willrogersnorth/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Sunset Point",
+    station: "Sunset Point Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-sunsetpointca/chunklist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Topanga Beach",
+    station: "Topanga Overview Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-charthouse/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Topanga Beach",
+    station: "Topanga Beach Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-topangabeach/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Zuma Beach",
+    station: "Zuma Beach Overview Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-zumaov/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Zuma Beach",
+    station: "Zuma Beach North Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-zumabeachnorth/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Zuma Beach",
+    station: "Zuma Beach Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-zumabeach/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Westward Beach",
+    station: "Westward Beach Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-westwardbeach/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "County Line",
+    station: "County Line Overview Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-countylineov/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "County Line",
+    station: "County Line Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-countylinebeach/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Leo Carrillo",
+    station: "Leo Carrillo Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-leocarrillosb/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Monarch Beach",
+    station: "Monarch Beach Cam",
+    url: "https://edge01.london.nginx.hdontap.com/hosb1/fulkra_monarch_resort_beach.stream/chunklist_w245457793.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Manhattan Beach",
+    station: "Manhattan Beach Cam",
+    url: "https://edge01.london.nginx.hdontap.com/hosb1/easton_el-porto-overlook_panoramic.stream/chunklist_w702187909.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Manhattan beach",
+    station: "Manhattan Pier Southside",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-manhattanpierss/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Manhattan beach",
+    station: "Manhattan Pier Northside",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-manhattanpierns/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Seal Beach",
+    station: "Seal Beach Pier Overview",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-sealbeachssov/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Seal Beach",
+    station: "Seal Beach Pier Southside",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-sealbeachss/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Bruce's Beach",
+    station: "Bruce's Beach Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-brucesbeach/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Redondo Beach",
+    station: "Redondo Breakwater",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-redondobreak/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Sapphire St",
+    station: "Sapphire St Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-sapphire/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Haggerty's",
+    station: "Haggerty's Cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-torrance/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Dockweiler Beach",
+    station: "Dockweiler Beach cam",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-dockweiler/chunklist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Dockweiler Beach",
+    station: "Dockweiler Beach North",
+    url: "https://cams.cdn-surfline.com/cdn-wc/wc-dockweilernorth/chunklist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "69BRAVO",
+    station: "69BRAVO 360 Cam",
+    url: "https://623bf6bf3ce68.streamlock.net:444/design1/design1.stream/chunklist_w1663802346.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "69BRAVO",
+    station: "69BRAVO Live Cam 1",
+    url: "https://alto.boldlygoingnowhere.org/N/N.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "69BRAVO",
+    station: "69BRAVO Live Cam 2",
+    url: "https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "69BRAVO",
+    station: "69BRAVO Live Cam 3",
+    url: "https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "69BRAVO",
+    station: "69BRAVO Live Cam 4",
+    url: "https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "Feeds",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Torrance",
+    station: "Rocketship Park Cam",
+    url: "https://s65.ipcamlive.com/streams/41dli9d3q58gjoahf/stream.m3u8",
     referer: "",
     origin: "",
     length: "0",
