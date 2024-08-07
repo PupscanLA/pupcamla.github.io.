@@ -221,7 +221,7 @@ body {
 	background-color: #E0DDD8;
 }
 .chanPlaying {
-	background-color: #abebc6;
+	background-color: #E0DDD8;
 }
 .chanFail {
 	background-color: #f2d7d5;
@@ -263,7 +263,7 @@ body {
 .hdrWebcam {
 	line-height: 30px;
 	height: 30px;
-    width: 33%;
+    width: 34%;
     padding: 2px 0;
     cursor: pointer;
 }
@@ -323,78 +323,160 @@ body {
 		</div>
 	</div>
 	<div id="main">
-		<span id="left">
-			<span id="row2"><div class="hdrNational disabledHeader">National</div><div class="hdrYoutube disabledHeader">YouTube</div><div class="hdrWebcam disabledHeader">Web Cams</div></span>
-			<span id="row1"><div class="hdrWest enabledHeader">U.S. West</div><div class="hdrMidwest disabledHeader">U.S. Mid</div><div class="hdrEast disabledHeader">U.S. East</div></span>
-			<div class="listWest divList showList">
-				<div id="la" class="marketDiv marketOdd"><span class="marketHeader">Los Angeles</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
-				<div id="sd" class="marketDiv"><span class="marketHeader">San Diego</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
-				<div id="sf" class="marketDiv marketOdd"><span class="marketHeader">S.F. Bay Area</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
-				<div id="dv" class="marketDiv"><span class="marketHeader">Denver</span><span class="clock" data-timezone="America/Denver"></span></div>
-				<div id="phx" class="marketDiv marketOdd"><span class="marketHeader">Phoenix</span><span class="clock" data-timezone="America/Phoenix"></span></div>
-				<div id="sac" class="marketDiv"><span class="marketHeader">Sacramento</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
-				<div id="sea" class="marketDiv marketOdd"><span class="marketHeader">Seattle</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
-				<div id="port" class="marketDiv"><span class="marketHeader">Portland</span><span class="clock" data-timezone="America/Los_Angeles"></span></div>
-				<div id="othWest" class="marketDiv marketOdd"><span class="marketHeader">Other Markets</span></div>
-			</div>
-			<div class="listMid divList hideList">
-				<div id="chi" class="marketDiv marketOdd"><span class="marketHeader">Chicago</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="stl" class="marketDiv"><span class="marketHeader">St. Louis</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="dal" class="marketDiv marketOdd"><span class="marketHeader">Dallas</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="hou" class="marketDiv"><span class="marketHeader">Houston</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="sat" class="marketDiv marketOdd"><span class="marketHeader">San Antonio</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="okc" class="marketDiv"><span class="marketHeader">Oklahoma City</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="tul" class="marketDiv marketOdd"><span class="marketHeader">Tulsa</span><span class="clock" data-timezone="America/Chicago"></span></div>
-				<div id="othMid" class="marketDiv"><span class="marketHeader">Other Markets</span></div>
-			</div>
-			<div class="listEast divList hideList">
-				<div id="ny" class="marketDiv marketOdd"><span class="marketHeader">New York</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="bos" class="marketDiv"><span class="marketHeader">Boston</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="phi" class="marketDiv marketOdd"><span class="marketHeader">Philadelphia</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="wdc" class="marketDiv"><span class="marketHeader">Wash. D.C.</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="atl" class="marketDiv marketOdd"><span class="marketHeader">Atlanta</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="tampa" class="marketDiv"><span class="marketHeader">Tampa Bay Area</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="orl" class="marketDiv marketOdd"><span class="marketHeader">Orlando</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="mia" class="marketDiv"><span class="marketHeader">Miami/W Palm Bch</span><span class="clock" data-timezone="America/New_York"></span></div>
-				<div id="othEast" class="marketDiv marketOdd"><span class="marketHeader">Other Markets</span></div>
-			</div>
-			<div class="listNational divList hideList">
-				<div id="nat" class="marketDiv marketOdd"><span class="marketHeader">National Feeds</span></div>
-			</div>
-			<div id="sincFixed" class="marketOdd hideList" style="padding-top: 10px;">
-				<span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 50%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:340px;margin-left: -170px;">Sinclair Broadcast Group owns over<br/>190 TV stations across the U.S.<br/>Instead of listing all the stations that have news operations, you can query by 'News'(broadcasts) or 'Events'(live events such as remote reporting, news conferences, or other unscheduled live news events), or 'All'(both 'News' & 'Events').<br/>Feeds returned should(though not always) have live content at that time.<br/>Note: Sinclair is heavily 'Conservative', especially their own produced 'news' shows.</span></span></span><span style="display: flex;">
-					<button id="sinclairAll" class="flatBtn" style="width: 70px;margin-left: auto;">All</button>
-					<button id="sinclairNews" class="flatBtn" style="width: 70px;margin: 4px 20px;">News</button>
-					<button id="sinclairEvents" class="flatBtn" style="width: 70px;margin-right: auto;">Events</button>
-				</span>
-			</div>			
-			<div class="listSinclair divList hideList">
-				<div id="sincN" class="marketDiv marketOdd"></div>
-				<div id="sinc" class="marketDiv marketOdd"></div>
-			</div>
-			<div id="gramFixed" class="marketOdd hideList" style="padding-top: 10px;height: 50px;">
-				</span><span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 50%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:280px;margin-left: -140px;">Graham Media Group owns<br/>7 TV stations, in 4 states.<br/>These are feeds that they share.</br>The titles originate from them.</span></span></span>
-				<button id="refreshGD" class="flatBtn" style="margin: 0 25px;float: right;">Refresh</button>
-			</div>			
-			<div class="listGraham divList hideList">
-				<div id="gdList" class="marketDiv marketOdd"></div>
-			</div>
-			<div class="listYoutube divList hideList">
-				<div id="yt" class="marketDiv marketOdd"><span class="marketHeader">Youtube Videos</span>
-				<span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 20%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:280px;margin-left: -240px;">Links here may not work day to day until I have an update method in place.<br>Some links may need a second click on TV icon.</span></span></span>
-				</div>
-			</div>
-			<div class="listWebcam divList hideList">
-				<div id="webcam" class="marketDiv marketOdd"><span class="marketHeader">LA Cams</span>
-				<span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 20%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:280px;margin-left: -240px;">Links here may not work day to day until I have an update method in place.<br>Some links may need a second click on TV icon.</span></span></span>
-				</div>
-			</div>
-			<div class="listCBStest divList hideList">
-				<div id="cbstest" class="marketDiv marketOdd"><span class="marketHeader">CBS Prod. Feeds</span>
-				<span class="capTitle">&nbsp;<span class="toolTipInfo" style="--after-offset-var: 20%;top: -1px;"><span class="toolTipText" style="--tttxt-width-var:280px;margin-left: -240px;">Links here may not work day to day until I have an update method in place.<br>Some links may need a second click on TV icon.</span></span></span>
-				</div>
-			</div>
+	<span id="left">
+		<span id="row2">
+			<div class="hdrNational disabledHeader">National</div>
+			<div class="hdrYoutube disabledHeader">YouTube</div>
+			<div class="hdrWebcam disabledHeader">Web Cams</div>
 		</span>
+		<span id="row1">
+			<div class="hdrWest enabledHeader">U.S. West</div>
+			<div class="hdrMidwest disabledHeader">U.S. Mid</div>
+			<div class="hdrEast disabledHeader">U.S. East</div>
+		</span>
+		<div class="listWest divList showList">
+			<div id="la" class="marketDiv marketOdd">
+				<span class="marketHeader">Los Angeles</span>
+				<span class="clock" data-timezone="America/Los_Angeles"></span>
+			</div>
+			<div id="sd" class="marketDiv">
+				<span class="marketHeader">San Diego</span>
+				<span class="clock" data-timezone="America/Los_Angeles"></span>
+			</div>
+			<div id="sf" class="marketDiv marketOdd">
+				<span class="marketHeader">S.F. Bay Area</span>
+				<span class="clock" data-timezone="America/Los_Angeles"></span>
+			</div>
+			<div id="dv" class="marketDiv">
+				<span class="marketHeader">Denver</span>
+				<span class="clock" data-timezone="America/Denver"></span>
+			</div>
+			<div id="phx" class="marketDiv marketOdd">
+				<span class="marketHeader">Phoenix</span>
+				<span class="clock" data-timezone="America/Phoenix"></span>
+			</div>
+			<div id="sac" class="marketDiv">
+				<span class="marketHeader">Sacramento</span>
+				<span class="clock" data-timezone="America/Los_Angeles"></span>
+			</div>
+			<div id="sea" class="marketDiv marketOdd">
+				<span class="marketHeader">Seattle</span>
+				<span class="clock" data-timezone="America/Los_Angeles"></span>
+			</div>
+			<div id="port" class="marketDiv">
+				<span class="marketHeader">Portland</span>
+				<span class="clock" data-timezone="America/Los_Angeles"></span>
+			</div>
+			<div id="othWest" class="marketDiv marketOdd">
+				<span class="marketHeader">Other Markets</span>
+			</div>
+		</div>
+		<div class="listMid divList hideList">
+			<div id="chi" class="marketDiv marketOdd">
+				<span class="marketHeader">Chicago</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="stl" class="marketDiv">
+				<span class="marketHeader">St. Louis</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="dal" class="marketDiv marketOdd">
+				<span class="marketHeader">Dallas</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="hou" class="marketDiv">
+				<span class="marketHeader">Houston</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="sat" class="marketDiv marketOdd">
+				<span class="marketHeader">San Antonio</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="okc" class="marketDiv">
+				<span class="marketHeader">Oklahoma City</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="tul" class="marketDiv marketOdd">
+				<span class="marketHeader">Tulsa</span>
+				<span class="clock" data-timezone="America/Chicago"></span>
+			</div>
+			<div id="othMid" class="marketDiv">
+				<span class="marketHeader">Other Markets</span>
+			</div>
+		</div>
+		<div class="listEast divList hideList">
+			<div id="ny" class="marketDiv marketOdd">
+				<span class="marketHeader">New York</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="bos" class="marketDiv">
+				<span class="marketHeader">Boston</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="phi" class="marketDiv marketOdd">
+				<span class="marketHeader">Philadelphia</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="wdc" class="marketDiv">
+				<span class="marketHeader">Wash. D.C.</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="atl" class="marketDiv marketOdd">
+				<span class="marketHeader">Atlanta</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="tampa" class="marketDiv">
+				<span class="marketHeader">Tampa Bay Area</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="orl" class="marketDiv marketOdd">
+				<span class="marketHeader">Orlando</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="mia" class="marketDiv">
+				<span class="marketHeader">Miami/W Palm Bch</span>
+				<span class="clock" data-timezone="America/New_York"></span>
+			</div>
+			<div id="othEast" class="marketDiv marketOdd">
+				<span class="marketHeader">Other Markets</span>
+			</div>
+		</div>
+		<div class="listNational divList hideList">
+			<div id="nat" class="marketDiv marketOdd">
+				<span class="marketHeader">National Feeds</span>
+			</div>
+		</div>
+		<div class="listYoutube divList hideList">
+			<div id="yt" class="marketDiv marketOdd">
+				<span class="marketHeader">Youtube Live</span>
+				<span class="capTitle">&nbsp;
+					<span class="toolTipInfo" style="--after-offset-var: 20%; top: -1px;">
+						<span class="toolTipText" style="--tttxt-width-var:280px; margin-left: -240px;">
+							Links here may not work day to day until I have an update method in place. Some links may need a second click on TV icon.
+						</span>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="listWebcam divList hideList">
+			<div id="webcam" class="marketDiv marketOdd">
+				<span class="marketHeader">LA Cams</span>
+            </div>
+			<div id="FwyCams" class="marketDiv">
+				<span class="marketHeader">LA Fwy Cams</span>
+			</div>
+				<span class="capTitle">&nbsp;
+					<span class="toolTipInfo" style="--after-offset-var: 20%; top: -1px;">
+						<span class="toolTipText" style="--tttxt-width-var:280px; margin-left: -240px;">
+							Links here may not work day to day until I have an update method in place. Some links may need a second click on TV icon.
+						</span>
+					</span>
+				</span>
+			</div>
+		</div>
+	</span>
+</div>
+
 		<span id="right">
 			<div id="video-container" style="max-width:800px;"></div>
 			<div class="btnDiv">
@@ -3828,6 +3910,19 @@ let items = [{
     length: "395",
     fb: "",
     helo: ""
+  }, {
+    id: "KCBS1",
+    dynamic: "false",
+    city: "la",
+    net: "cbs",
+    call: "KCBS",
+    station: "Car Chase",
+    url: "https://dai.google.com/linear/hls/event/RjvF1cd0Qx-65Dz14THpPA/master.m3u8",
+    referer: "https://www.cbsnews.com/live/car-chase/",
+    origin: "http://losangeles.cbslocal.com",
+    length: "0",
+    fb: "",
+    helo: "N29HD"
 }, {
     id: "KNBC1",
     dynamic: "false",
@@ -3860,7 +3955,7 @@ let items = [{
     city: "la",
     net: "nbc",
     call: "KNBC",
-    station: "NBC4 Feed 2",
+    station: "NBC4 Chopper Second Feed",
     url: "https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream2/master_720.m3u8",
     referer: "https://www.nbclosangeles.com/",
     origin: "https://www.nbclosangeles.com/",
@@ -3899,7 +3994,7 @@ let items = [{
     city: "la",
     net: "nbc",
     call: "KNBC",
-    station: "NBC4 Feed 5",
+    station: "NBC4 Chopper Main Feed",
     url: "https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream5/master_720.m3u8",
     referer: "https://www.nbclosangeles.com/",
     origin: "https://www.nbclosangeles.com/",
@@ -3964,7 +4059,7 @@ let items = [{
     city: "la",
     net: "ktla",
     call: "KTLA",
-    station: "KTLA5 Feed 5",
+    station: "Sky5",
     url: "adstJyjXmRo9dVD1?anvack=X8POa4zpGZMmeiq0wqiO8IP5rMqQM9VN",
     referer: "https://ktla.com/on-air/live-video-feed-5/",
     origin: "https://ktla.com",
@@ -4081,7 +4176,7 @@ let items = [{
     city: "la",
     net: "fox",
     call: "KTTV",
-    station: "FOX11 Events Feed",
+    station: "Skyfox",
     url: "adstwpyRMRx4q8K9?anvack=bmQv8nXMalCOobBhvhpo9eMTE1OzN4lD",
     referer: "https://www.foxla.com/live",
     origin: "https://www.foxla.com",
@@ -9064,7 +9159,7 @@ let items = [{
     net: "cbs",
     call: "WANF",
     station: "WGCL Web Cam Test",
-    url: "https://wms-prod-1.wetmet.net/live/73-08-01/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OS8yOS8yMDIyIDk6MjE6NTAgUE0maGFzaF92YWx1ZT1LTHJUSE5jWWhIbnh5K3UvaVJMay9nPT0mdmFsaWRtaW51dGVzPTMw",
+    url: "https://wms-prod-1.wetmet.net/live/73-08-01/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OC82LzIwMjQgMTA6MTI6MjUgUE0maGFzaF92YWx1ZT12cXJiclZUMXNYU2ZTaEx0a1VHVll3PT0mdmFsaWRtaW51dGVzPTMw",
     referer: "https://www.atlantanewsfirst.com/weather/cams",
     origin: "https://www.atlantanewsfirst.com/weather/cams",
     length: "0",
@@ -9389,96 +9484,19 @@ let items = [{
 //	{id:"TEST2",dynamic:"true",city:"oth",net:"news",call:"TEST2",station:"CNBC TEST",url:"cnbc-dt?anvack=BAokpg62VtMa2JnH1mHYpXM5F658RNAL&anvtrid=w2664f838098054963b3aeb7b",referer:"https://newyork.cbslocal.com",origin:"https://newyork.cbslocal.com",length:"395",fb:"",helo:""},
 //	{id:"WJZ02",dynamic:"true",city:"oth",net:"cbs",call:"WJZ",station:"WJZ13-SU CBS Baltimore",url:"c315?anvack=5VD6Eyd6djewbCmNwBFnsJj17YAvGRwl",referer:"https://baltimore.cbslocal.com",origin:"https://baltimore.cbslocal.com",length:"395",fb:"",helo:""},
 {
-    id: "FOXE1",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 1",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-01/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "FOXE2",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 2",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-02/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "FOXE3",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 3",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-03/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+ 
 }, {
-    id: "FOXE4",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 4",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-04/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "FOXE5",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 5",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-05/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "FOXE6",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 6",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-06/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "FOXE7",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXE",
-    station: "FOX News Event 7",
-    url: "https://events.foxnews.com/hls/live/2003994/ny-sc-07/main.m3u8",
-    referer: "https://www.foxnews.com/",
-    origin: "https://www.foxnews.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+   
 }, {
     id: "CNN06",
     dynamic: "false",
@@ -9623,84 +9641,17 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "ITV1",
-    dynamic: "false",
-    city: "nat",
-    net: "ent",
-    call: "ITV1",
-    station: "ITV One UK",
-    url: "https://cdnuk001.broadcastcdn.net/KUK-ITV001/index.m3u8",
-    referer: "https://itv.com/",
-    origin: "https://itv.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "ITV1A",
-    dynamic: "false",
-    city: "nat",
-    net: "ent",
-    call: "ITV1",
-    station: "ITV One UK(alt)",
-    url: "https://itv1.broadcastgmt.net/KUK-ITV001/index.m3u8?SiteID=676398&ptype=20",
-    referer: "https://itv.com/",
-    origin: "https://itv.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "ITV2",
-    dynamic: "false",
-    city: "nat",
-    net: "ent",
-    call: "ITV2",
-    station: "ITV Two UK",
-    url: "https://cdnuk001.broadcastcdn.net/KUK-ITV2/tracks-v1a1/mono.m3u8",
-    referer: "https://itv.com/",
-    origin: "https://itv.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "TNTN1",
-    dynamic: "false",
-    city: "nat",
-    net: "ent",
-    call: "TNT",
-    station: "TNT Network",
-    url: "https://tve-live-ctl.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8",
-    referer: "https://www.tntdrama.com/",
-    origin: "https://www.tntdrama.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "TBSN1",
-    dynamic: "false",
-    city: "nat",
-    net: "ent",
-    call: "TBS",
-    station: "TBS Network",
-    url: "https://tve-live-ctl.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8",
-    referer: "https://www.tbs.com/",
-    origin: "https://www.tbs.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "UKC4",
-    dynamic: "false",
-    city: "nat",
-    net: "ent",
-    call: "Ch4UK",
-    station: "Channel 4 UK",
-    url: "https://cdnuk001.broadcastcdn.net/KUK-CHANNEL4/index.m3u8",
-    referer: "www.channel4.com",
-    origin: "www.channel4.com",
-    length: "0",
-    fb: "",
-    helo: ""
-}, {
+ 
     id: "NBCN1",
     dynamic: "false",
     city: "nat",
@@ -9790,18 +9741,7 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "NBCN0",
-    dynamic: "false",
-    city: "nat",
-    net: "nbc",
-    call: "NBCNN",
-    station: "NBC News Now 24/7",
-    url: "https://nbcnews2.akamaized.net/hls/live/723426/NBCNewsPlaymaker24x7Linear99a3a827-ua/master.m3u8",
-    referer: "https://www.nbcnews.com/now",
-    origin: "https://www.nbcnews.com/now",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
     id: "ABCNM",
     dynamic: "false",
@@ -9816,30 +9756,9 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "CNN01",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN News",
-    url: "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8",
-    referer: "https://www.cnn.com/",
-    origin: "https://www.cnn.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CNN01B",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN News(alt)",
-    url: "https://tve-live-ctl.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8",
-    referer: "https://www.cnn.com/",
-    origin: "https://www.cnn.com/",
-    length: "0",
-    fb: "",
+
     helo: ""
 }, //	{id:"CNN01B",dynamic:"false",city:"nat",net:"cnn",call:"CNN",station:"CNN News(alt)",url:"https://994099ce85d941afa3ea3e737ac227d0.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-ch_CNN/playlist.m3u8",referer:"https://www.cnn.com/",origin:"https://www.cnn.com/",length:"0",fb:"",helo:""},
 {
@@ -9869,46 +9788,13 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "CNNB3B",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNNI",
-    station: "CNN International(alt)",
-    url: "https://tve-live-ctl.warnermediacdn.com/hls/live/586497/cnngo/cnni/VIDEO_0_3564000.m3u8",
-    referer: "https://www.cnn.com/",
-    origin: "https://www.cnn.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, //	{id:"MSNBC",dynamic:"false",city:"nat",net:"nbc",call:"MSNBC",station:"MSNBC News",url:"https://llnw.stream.msnbc.com/live/MSNBC398a080a-ua/VIDEO_2_3096000.m3u8",referer:"https://www.msnbc.com/",origin:"https://www.msnbc.com/",length:"0",fb:"",helo:""},
 //	{id:"MSNBC",dynamic:"false",city:"nat",net:"nbc",call:"MSNBC",station:"MSNBC News",url:"https://llnw.stream.msnbc.com/live/MSNBC398a080a-ua/master.m3u8",referer:"https://www.msnbc.com/",origin:"https://www.msnbc.com/",length:"0",fb:"",helo:""},
 {
-    id: "MSNBC",
-    dynamic: "false",
-    city: "nat",
-    net: "nbc",
-    call: "MSNBC",
-    station: "MSNBC News(dead)",
-    url: "http://encodercdn1.frontline.ca/encoder182/output/MSNBC_720p/playlist.m3u8",
-    referer: "https://www.msnbc.com/",
-    origin: "https://www.msnbc.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "FOXN2",
-    dynamic: "false",
-    city: "nat",
-    net: "fox",
-    call: "FOXN",
-    station: "FOX News(dead)",
-    url: "https://rtmp2.livenewsof.com:8443/live/smil:fox1.smil/playlist.m3u8",
-    referer: "https://www.foxnews.com",
-    origin: "https://www.foxnews.com",
-    length: "491",
-    fb: "",
-    helo: ""
+ 
 }, //	{id:"FOXN1",dynamic:"false",city:"nat",net:"fox",call:"FOXN",station:"FOX News(alt)",url:"https://rtmp2.livenewsof.com:8443/live/smil:fox1.smil/chunklist_w411726288_b800000.m3u8",referer:"https://www.foxnews.com",origin:"https://www.foxnews.com",length:"491",fb:"",helo:""},
 {
     id: "FOXNN",
@@ -9959,29 +9845,9 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "NASA3",
-    dynamic: "false",
-    city: "nat",
-    net: "news",
-    call: "NASA3",
-    station: "NASA Alt source",
-    url: "https://uplynkcontent.sinclairstoryline.com/channel/ddd76fdc1c0a456ba537e4f48e827d3e.m3u8",
-    referer: "",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CBSSHQ",
-    dynamic: "false",
-    city: "nat",
-    net: "cbs",
-    call: "CBSSHQ",
-    station: "CBS Sorts HQ",
-    url: "https://mediag2481ed.airspace-cdn.cbsivideo.com/sportshqv2-master/master/sportshqv2-master_7.m3u8",
-    referer: "https://www.cbsnews.com/live/cbs-sports-hq/",
-    origin: "https://www.cbsnews.com/live/cbs-sports-hq/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
     id: "CRTV1",
     dynamic: "false",
@@ -10023,32 +9889,10 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "BBCN1",
-    dynamic: "false",
-    city: "nat",
-    net: "gb",
-    call: "BBCNEWS",
-    station: "BBC News UK",
-    url: "https://vs-hls-push-ww-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
-    referer: "https://www.bbc.com/news",
-    origin: "https://www.bbc.com/news",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, //	{id:"BBCN2",dynamic:"false",city:"nat",net:"gb",call:"BBC1S",station:"BBC1 Scotland(dead)",url:"https://www.filmon.com/vr-streams/3166.high/playlist.m3u8",referer:"https://www.bbc.com/news",origin:"https://www.bbc.com/news",length:"0",fb:"",helo:""},
 {
-    id: "BBCN3",
-    dynamic: "false",
-    city: "nat",
-    net: "gb",
-    call: "BBCNEWS",
-    station: "BBC News UK(alt)",
-    url: "https://cdnuk001.broadcastcdn.net/KUK-BBCNEWSHD/index.m3u8",
-    referer: "https://www.bbc.com/news",
-    origin: "https://www.bbc.com/news",
-    length: "0",
-    fb: "",
-    helo: ""
+ 
 }, {
     id: "SKY01",
     dynamic: "false",
@@ -10056,38 +9900,16 @@ let items = [{
     net: "gb",
     call: "SkyNews",
     station: "Sky News UK",
-    url: "https://linear021-gb-hls1-prd-ak.cdn.skycdp.com/Content/HLS_001_hd/Live/channel(skynews)/08_hd.m3u8",
+    url: "https://linear417-gb-hls1-prd-ak.cdn.skycdp.com/100e/Content/HLS_001_1080_30/Live/channel(skynews)/04_1080-30.m3u8",
     referer: "https://news.sky.com/watch-live",
     origin: "https://news.sky.com/",
     length: "0",
     fb: "",
     helo: ""
 }, {
-    id: "SKY02",
-    dynamic: "false",
-    city: "nat",
-    net: "gb",
-    call: "SkyNews",
-    station: "Sky News UK(U.S.)",
-    url: "https://linear115-gb-hls1-prd-ak.cdn.skycdp.com/Content/HLS_001_hd/Live/channel(skynewsamerica)/08_hd.m3u8",
-    referer: "https://news.sky.com/watch-live",
-    origin: "https://news.sky.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "SKY03",
-    dynamic: "false",
-    city: "nat",
-    net: "gb",
-    call: "SkyNews Alt.",
-    station: "Sky News UK",
-    url: "https://siloh.pluto.tv/lilo/production/SkyNews/master_1.m3u8",
-    referer: "https://news.sky.com/watch-live",
-    origin: "https://news.sky.com/",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, //	{id:"UKRN1",dynamic:"false",city:"nat",net:"news",call:"UkrNews",station:"Ukraine News Channel",url:"https://streamvideol1.luxnet.ua/news24/news24.stream/playlist.m3u8",referer:"https://www.news24.com/news24/",origin:"https://www.news24.com/news24/",length:"0",fb:"",helo:""},
 //	{id:"UKRN2",dynamic:"false",city:"nat",net:"news",call:"UkrNews",station:"Ukraine News Channel(alt)",url:"https://ua-tv.cdn-02.cosmonova.net.ua/hls/ua-tv_ua_mid/index.m3u8",referer:"https://www.news24.com/news24/",origin:"https://www.news24.com/news24/",length:"0",fb:"",helo:""},
 //	{id:"RTE01",dynamic:"false",city:"nat",net:"ie",call:"RTE",station:"RTE News Ireland",url:"https://live.rte.ie/live/a/channel3/news.isml/news.m3u8",referer:"https://www.rte.ie/player/onnow/66546216065",origin:"https://www.rte.ie/news/",length:"0",fb:"",helo:""},
@@ -10301,239 +10123,39 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "CNN02",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 1",
-    url: "https://cnngo1.akamaized.net/hls/live/598782/PROD-cnnlive1/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+   
 }, {
-    id: "CNN03",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 2",
-    url: "https://cnngo1.akamaized.net/hls/live/599236/PROD-cnnlive2/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+ 
 }, {
-    id: "CNN04",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 3",
-    url: "https://cnngo1.akamaized.net/hls/live/599237/PROD-cnnlive3/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CNN05",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 4",
-    url: "https://cnngo1.akamaized.net/hls/live/599238/PROD-cnnlive4/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CNN17",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 5",
-    url: "https://cnngo1.akamaized.net/hls/live/2014595/PROD-cnnlive5/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CNN18",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 6",
-    url: "https://cnngo1.akamaized.net/hls/live/2014596/PROD-cnnlive6/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CNN19",
-    dynamic: "false",
-    city: "nat",
-    net: "cnn",
-    call: "CNN",
-    station: "CNN Live Event 7",
-    url: "https://cnngo1.akamaized.net/hls/live/2014597/PROD-cnnlive7/VIDEO_0_3628000.m3u8",
-    referer: "https://www.cnn.com",
-    origin: "https://www.cnn.com",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "CTV01",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV1",
-    station: "CTV News Live Events 1",
-    url: "https://pe-ak-lp02a-9c9media.akamaized.net/live/News1Digi/p/dash/00000001/8e377c581da8df4e/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "CTV02",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV2",
-    station: "CTV News Live Events 2",
-    url: "https://pe-ak-lp01a-9c9media.akamaized.net/live/News2Digi/p/dash/00000001/7989457f94a2b42c/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CTV03",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV3",
-    station: "CTV News Live Events 3",
-    url: "https://pe-ak-lp02a-9c9media.akamaized.net/live/News3Digi/p/dash/00000001/531849b5c6d55eff/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "CTV04",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV4",
-    station: "CTV News Live Events 4",
-    url: "https://pe-ak-lp02a-9c9media.akamaized.net/live/News4Digi/p/dash/00000001/4b36d011b438df10/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CTV05",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV5",
-    station: "CTV News Live Events 5",
-    url: "https://pe-ak-lp01a-9c9media.akamaized.net/live/News5Digi/p/dash/00000001/bdef497dd266de2d/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CTV06",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV6",
-    station: "CTV News Live Events 6",
-    url: "https://pe-ak-lp01a-9c9media.akamaized.net/live/News6Digi/p/dash/00000001/dcbf2cb5b9217dcd/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+ 
 }, {
-    id: "CTV07",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV7",
-    station: "CTV News Live Events 7?",
-    url: "https://capi.9c9media.com/destinations/ctvnews_web/platforms/desktop/bond/contents/68596/contentpackages/440602/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CTV08",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV8",
-    station: "CTV News Live Events 8",
-    url: "https://pe-ak-lp01a-9c9media.akamaized.net/live/DMCDigi10/p/dash/00000001/97e8aec38092a6e9/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
-    id: "CTV09",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CTV9",
-    station: "CTV News Live Events 9",
-    url: "https://pe-ak-lp02a-9c9media.akamaized.net/live/DMCDigi11/p/dash/00000001/7b79214a8d4b915c/manifest.mpd",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+   
 }, {
-    id: "CTV11",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CP24-1",
-    station: "CP24 News Live Events 1",
-    url: "https://pe-fa-lp01a.9c9media.com/live/News3CP24Digi/p/hls/00000201/57a36bc399c6e41a/manifest.m3u8",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
-}, {
-    id: "CTV12",
-    dynamic: "false",
-    city: "nat",
-    net: "ctv",
-    call: "CP24-2",
-    station: "CP24 News Live Events 2?",
-    url: "https://pe-fa-lp02a.9c9media.com/live/News3CP24Digi/p/hls/00000201/57a36bc399c6e41a/manifest.m3u8",
-    referer: "https://ctv.ca",
-    origin: "https://ctv.ca",
-    length: "0",
-    fb: "",
-    helo: ""
+
 }, {
     id: "CNBC1",
     dynamic: "false",
@@ -10593,57 +10215,13 @@ let items = [{
     fb: "",
     helo: ""
 }, {
-    id: "NBCN6",
-    dynamic: "false",
-    city: "nat",
-    net: "nbc",
-    call: "NBCNat",
-    station: "NBC National Feed 1",
-    url: "https://nbculocallive.akamaized.net/hls/live/2035368/national/stream1/master_720.m3u8",
-    referer: "https://www.nbcnews.com/now",
-    origin: "https://www.nbcnews.com/now",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "NBCN7",
-    dynamic: "false",
-    city: "nat",
-    net: "nbc",
-    call: "NBCNat",
-    station: "NBC National Feed 2",
-    url: "https://nbculocallive.akamaized.net/hls/live/2035368/national/stream2/master_720.m3u8",
-    referer: "https://www.nbcnews.com/now",
-    origin: "https://www.nbcnews.com/now",
-    length: "0",
-    fb: "",
-    helo: ""
+ 
 }, {
-    id: "NBCN8",
-    dynamic: "false",
-    city: "nat",
-    net: "nbc",
-    call: "NBCNat",
-    station: "NBC National Feed 3",
-    url: "https://nbculocallive.akamaized.net/hls/live/2035368/national/stream3/master_720.m3u8",
-    referer: "https://www.nbcnews.com/now",
-    origin: "https://www.nbcnews.com/now",
-    length: "0",
-    fb: "",
-    helo: ""
+  
 }, {
-    id: "NBCN9",
-    dynamic: "false",
-    city: "nat",
-    net: "nbc",
-    call: "NBCNat",
-    station: "NBC National Feed 4",
-    url: "https://nbculocallive.akamaized.net/hls/live/2035368/national/stream4/master_720.m3u8",
-    referer: "https://www.nbcnews.com/now",
-    origin: "https://www.nbcnews.com/now",
-    length: "0",
-    fb: "",
-    helo: ""
+ 
 }, //	{id:"WSJE1",dynamic:"false",city:"nat",net:"news",call:"WSJ",station:"WSJ Events 1",url:"https://wsjlivehls-lh.akamaihd.net/i/events1_1@174990/index_8_av-p.m3u8",referer:"https://www.wsj.com/video/",origin:"https://www.wsj.com/video/",length:"0",fb:"",helo:""},
 //	{id:"WSJE2",dynamic:"false",city:"nat",net:"news",call:"WSJ",station:"WSJ Events 2",url:"https://wsjlivehls-lh.akamaihd.net/i/events2_1@174990/index_8_av-p.m3u8",referer:"https://www.wsj.com/video/",origin:"https://www.wsj.com/video/",length:"0",fb:"",helo:""},
 //	{id:"WSJE3",dynamic:"false",city:"nat",net:"news",call:"WSJ",station:"WSJ Events 3",url:"https://wsjlivehls-lh.akamaihd.net/i/nyc1_1@174988/index_7_av-p.m3u8",referer:"https://www.wsj.com/video/",origin:"https://www.wsj.com/video/",length:"0",fb:"",helo:""},
@@ -10676,7 +10254,7 @@ let items = [{
     dynamic: "false",
     city: "yt",
     net: "yt",
-    call: "City of Orange Plaza Camera",
+    call: "City of Orange Plaza",
     station: "City of Orange Plaza Camera",
     url: "https://www.youtube.com/watch?v=PtChZ0D7tkE",
     referer: "https://www.youtube.com/watch?v=PtChZ0D7tkE",
@@ -10798,6 +10376,19 @@ let items = [{
     station: "Live Lioncam: Founder's Pavilion",
     url: "https://youtu.be/X-i6rw8ZmSw",
     referer: "https://youtu.be/X-i6rw8ZmSw",
+    origin: "",
+    length: "0",
+    fb: "",
+    helo: ""
+  }, {
+    id: "YT011",
+    dynamic: "false",
+    city: "yt",
+    net: "yt",
+    call: "calabasas",
+    station: "Calabasas Weather Cam",
+    url: "https://youtu.be/mEPRNyOD6So",
+    referer: "https://youtu.be/mEPRNyOD6So",
     origin: "",
     length: "0",
     fb: "",
@@ -24500,7 +24091,7 @@ let items = [{
     origin: "https://www.hollywoodsign.org/webcam",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed1",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24511,7 +24102,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed2",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24522,7 +24113,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed3",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24533,7 +24124,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed4",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24544,7 +24135,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed5",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24555,7 +24146,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed6",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24566,7 +24157,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed7",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24577,7 +24168,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed8",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24588,7 +24179,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed9",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24599,7 +24190,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed10",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24610,7 +24201,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed11",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24621,7 +24212,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed12",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24632,7 +24223,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed13",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24643,7 +24234,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed14",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24654,7 +24245,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed15",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24665,7 +24256,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed16",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24676,7 +24267,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed17",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24687,7 +24278,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed18",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24698,7 +24289,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed19",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24709,7 +24300,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed20",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24720,7 +24311,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed21",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24731,7 +24322,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed22",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24742,7 +24333,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed23",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24753,7 +24344,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed24",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24764,7 +24355,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed25",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24775,7 +24366,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed26",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24786,7 +24377,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed27",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24797,7 +24388,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed28",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24808,7 +24399,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed29",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24819,7 +24410,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed30",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24830,7 +24421,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed31",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24841,7 +24432,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed32",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24852,7 +24443,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed33",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24863,7 +24454,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed34",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24874,7 +24465,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed35",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24885,7 +24476,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed36",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24896,7 +24487,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed37",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24907,7 +24498,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed38",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24918,7 +24509,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed39",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24929,7 +24520,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed40",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24940,7 +24531,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed41",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24951,7 +24542,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed42",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24962,7 +24553,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed43",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24973,7 +24564,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed44",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24984,7 +24575,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed45",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24995,7 +24586,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed46",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -25006,7 +24597,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed47",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -25017,7 +24608,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed48",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -25028,7 +24619,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed49",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -25039,7 +24630,7 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "Feed50",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -25050,13 +24641,79 @@ let items = [{
     origin: "",
     length: "0",
   }, {
-    id: "Feeds",
+    id: "FwyCam1",
     dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "Torrance",
-    station: "Rocketship Park Cam",
-    url: "https://s65.ipcamlive.com/streams/41dli9d3q58gjoahf/stream.m3u8",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Sb 110 DTLA Fwy Cam",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-192.stream/chunklist_w2058941072.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+}, {
+    id: "FwyCam2",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Nb 110 Fwy Cam Elysian Park",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-192.stream/chunklist_w88604132.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "FwyCam3",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Manhattan Beach Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-226.stream/chunklist_w1688611689.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "FwyCam4",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Aviation Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-225.stream/chunklist_w61938784.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "FwyCam5",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Torrance Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-223.stream/chunklist_w2069080951.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "FwyCam6",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Carson Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-222.stream/chunklist_w1966818444.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+  }, {
+    id: "FwyCam7",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "FwyCams",
+    call: "LA Fwy Cam",
+    station: "Hawthorne Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-224.stream/chunklist_w226927813.m3u8",
     referer: "",
     origin: "",
     length: "0",
