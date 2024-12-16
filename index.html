@@ -461,8 +461,11 @@ body {
 		<div class="listWebcam divList hideList">
 			<div id="webcam" class="marketDiv marketOdd">
 				<span class="marketHeader">LA Cams</span>
-            </div>
-			<div id="FwyCams" class="marketDiv">
+          </div>
+          <div id="MtCams" class="marketDiv">
+            <span class="marketHeader">Mountain Cam</span>
+           </div>
+			<div id="FwyCams" class="marketDiv marketOdd">
 				<span class="marketHeader">LA Fwy Cams</span>
 			</div>
 				<span class="capTitle">&nbsp;
@@ -4153,6 +4156,19 @@ let items = [{
     station: "ABC7 Breaking 2",
     url: "https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/KABCLive2.m3u8",
     referer: "https://abc7.com/watch/23343/",
+    origin: "https://abc7.com",
+    length: "0",
+    fb: "",
+    helo: ""
+  }, {
+    id: "KABC4",
+    dynamic: "false",
+    city: "la",
+    net: "abc",
+    call: "KABC",
+    station: "Abc7 Car Chase",
+    url: "https://content.uplynk.com/channel/ext/86878e7b71a34599b6cfa3d4a5bb31cf/Car_Chase_Channel.m3u8",
+    referer: "https://abc7.com/watch/14307761/",
     origin: "https://abc7.com",
     length: "0",
     fb: "",
@@ -10463,6 +10479,9 @@ let items = [{
     length: "0",
     fb: "",
     helo: ""
+
+  
+
 }, //	{id:"YT011",dynamic:"false",city:"yt",net:"yt",call:"Deer",station:"Deer Pantry Trough View(DEAD)",url:"https://www.youtube.com/watch?v=d5YTFcyUnr4",referer:"https://www.youtube.com/watch?v=d5YTFcyUnr4",origin:"",length:"0",fb:"",helo:""},
 //	{id:"YT012",dynamic:"false",city:"yt",net:"yt",call:"Deer",station:"Deer Pantry Close View(DEAD)",url:"https://www.youtube.com/watch?v=qOg4P_QOwfQ",referer:"https://www.youtube.com/watch?v=qOg4P_QOwfQ",origin:"",length:"0",fb:"",helo:""},
 //	{id:"YT002",dynamic:"false",city:"yt",net:"yt",call:"LVAC",station:"LV Airport Cam(not live)",url:"https://www.youtube.com/watch?v=SyxhrgZYLqc",referer:"https://www.youtube.com/channel/UCpWekERnJ3zwk-0gFlfursg/live",origin:"",length:"0",fb:"",helo:""},
@@ -24163,42 +24182,6 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed1",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "LA River Bending",
-    station: "Live LA River Bending Cam",
-    url: "https://dacastmmd.mmdlive.lldns.net/dacastmmd/eca517e812ca4b959963efa832f81c3c/chunklist_b4628000.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed54",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "Moving Mountains",
-    station: "Moving Mountains Livestream",
-    url: "https://dacastmmd.mmdlive.lldns.net/dacastmmd/85666383fee44164a6e149d81eeb77d6/chunklist_b4628000.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed55",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "LA River Bending",
-    station: "Un-development 1 Livestream",
-    url: "https://dacastmmd.mmdlive.lldns.net/dacastmmd/18533a941cb64168b6ca2658633bc868/chunklist_b4192000.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
     id: "Feed2",
     dynamic: "false",
     city: "webcam",
@@ -24218,43 +24201,6 @@ let items = [{
     call: "santamonicas",
     station: "Santa Monica Beach North Cam",
     url: "https://cams.cdn-surfline.com/cdn-wc/wc-santamonican/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-
-  }, {
-    id: "Feed60",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "santamonicas",
-    station: "See The Wheel",
-    url: "https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kcajbp1.fd0.sm1.av2.mt1.at0.as0.dv0.sh2.rt2480.rc0.edge.vpass.stream/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed61",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "santamonicas",
-    station: "Watch the Park",
-    url: "https://usw01-smr04-relay.ozolio.com/hls-live/_definst_/relay01.kwpxbpv.fd0.sm1.av2.mt1.at0.as0.dv0.sh2.rt2480.rc0.edge.vpass.stream/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed62",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "santamonicas",
-    station: "See The Pier",
-    url: "https://usw01-smr03-relay.ozolio.com/hls-live/_definst_/relay01.ikdybp6.fd0.sm1.av2.mt1.at0.as0.dv0.sh2.rt2480.rc0.edge.vpass.stream/playlist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24315,18 +24261,6 @@ let items = [{
     call: "Venice Beach",
     station: "Venice Breakwate",
     url: "https://cams.cdn-surfline.com/cdn-wc/wc-venicebreakwater/chunklist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed65",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "Venice Beach",
-    station: "Venice Southside Overview",
-    url: "https://cams.cdn-surfline.com/cdn-wc/wc-venicessov/playlist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24411,18 +24345,6 @@ let items = [{
     call: "C St",
     station: "C St.Surf Cam",
     url: "https://cams.cdn-surfline.com/cdn-wc/wc-cstreetov/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed16",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "Hermosa Beach",
-    station: "Hermosa Beach Cam",
-    url: " https://cams.cdn-surfline.com/cdn-wc/wc-hermosabeachnorth/chunklist.m3u8",
     referer: "",
     origin: "",
     length: "0",
@@ -24740,18 +24662,6 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed43",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "Haggerty's",
-    station: "Haggerty's Cam",
-    url: "https://cams.cdn-surfline.com/cdn-wc/wc-torrance/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
     id: "Feed44",
     dynamic: "false",
     city: "webcam",
@@ -24780,66 +24690,6 @@ let items = [{
     dynamic: "false",
     city: "webcam",
     net: "webcam",
-    call: "69BRAVO",
-    station: "69BRAVO 360 Cam",
-    url: "https://623bf6bf3ce68.streamlock.net:444/design1/design1.stream/chunklist_w1663802346.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed47",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "69BRAVO",
-    station: "69BRAVO Live Cam 1",
-    url: "https://alto.boldlygoingnowhere.org/N/N.stream/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed48",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "69BRAVO",
-    station: "69BRAVO Live Cam 2",
-    url: "https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed49",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "69BRAVO",
-    station: "69BRAVO Live Cam 3",
-    url: "https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed50",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
-    call: "69BRAVO",
-    station: "69BRAVO Live Cam 4",
-    url: "https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8",
-    referer: "",
-    origin: "",
-    length: "0",
-    helo: ""
-  }, {
-    id: "Feed51",
-    dynamic: "false",
-    city: "webcam",
-    net: "webcam",
     call: "Torrance Airport",
     station: "Torrance Airport Live Cam",
     url: "https://b10.hdrelay.com/camera/dc4b3a44-1951-49a9-bc28-9e2efca851fa/relay/chunklist_w1719231910.m3u8",
@@ -24848,7 +24698,7 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed52",
+    id: "Feed47",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24860,7 +24710,7 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed53",
+    id: "Feed48",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24872,7 +24722,7 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed56",
+    id: "Feed49",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24884,7 +24734,7 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed57",
+    id: "Feed50",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24896,7 +24746,7 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed58",
+    id: "Feed51",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -24908,7 +24758,7 @@ let items = [{
     length: "0",
     helo: ""
   }, {
-    id: "Feed59",
+    id: "Feed52",
     dynamic: "false",
     city: "webcam",
     net: "webcam",
@@ -25015,9 +24865,528 @@ let items = [{
     origin: "",
     length: "0",
     helo: ""
+  }, {
+    id: "FwyCam9",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "710 Fwy North of SR-47",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-954.stream/chunklist_w617590133.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam10",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Nb 101 At Hollywood Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-607.stream/chunklist_w567936360.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam11",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Nb 101 At Santa Monica Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-605.stream/chunklist_w1805031853.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam12",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Nb 101 At Pilgrimage Bridge",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-611.stream/chunklist_w318651173.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam13",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Nb 101 At Normandie Ave",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-604.stream/chunklist_w1086851398.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam14",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Nb 101 At Bonnie Brae St",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-597.stream/chunklist_w1846399189.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam15",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Sb 110 At Exposition Blvd",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-178.stream/chunklist_w1649526452.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "FwyCam16",
+    dynamic: "false",
+    city: "FwyCams",
+    net: "webcam",
+    call: "LA Fwy Cam",
+    station: "Sb 110 At Slauson Avenue",
+    url: "https://wzmedia.dot.ca.gov/D7/CCTV-175.stream/chunklist_w1090134450.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "MtCams1",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "69BRAVO 360 Cam",
+    url: "https://623bf6bf3ce68.streamlock.net:444/design1/design1.stream/chunklist_w1663802346.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "MtCams2",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "69BRAVO Live Cam 1",
+    url: "https://alto.boldlygoingnowhere.org/N/N.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+}, {
+    id: "MtCams3",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "69BRAVO Live Cam 2",
+    url: "https://alto.boldlygoingnowhere.org/E/E.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+}, {
+    id: "MtCams4",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "69BRAVO Live Cam 3",
+    url: "https://alto.boldlygoingnowhere.org/W/W.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+}, {
+  id: "MtCams5",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "69BRAVO Live Cam 4",
+    url: "https://alto.boldlygoingnowhere.org/S/S.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams6",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Lake Gregory Cam",
+    url: "https://streamer2.brownrice.com/lakegreg1/lakegreg1.stream/main_playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams7",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Lake Gregory Cam 2",
+    url: "https://cs9.pixelcaster.com/live/mtncams-crestline-2.stream/chunks.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams8",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Lake Gregory 3",
+    url: "https://wzmedia.dot.ca.gov/D8/LB-8_18_125.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams9",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Lake Arrowhead",
+    url: "https://cs9.pixelcaster.com/live/mtncams-arrowhead-1.stream/chunks.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams10",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Lake Arrowhead Blue Jay Cam",
+    url: "https://stream-ue1-delta.dropcam.com/nexus_aac/67f340b65dae40b0935be4257087817e/chunklist_w1150355468.m3u8?public=RDgUBfREKB",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams11",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Crestline Cam",
+    url: "https://cs9.pixelcaster.com/live/mtncams-crestline-1.stream/chunks.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams12",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Hwy 18 Crestline",
+    url: "https://wzmedia.dot.ca.gov/D8/LB-8_138_393.stream/playlist.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams13",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Palm Springs Aerial Tramway Cam",
+    url: "https://cs9.pixelcaster.com/live/aw-psat2.stream/chunks.m3u8",
+    referer: "",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams14",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Palm Springs LIVE Webcam",
+    url: "https://www.youtube.com/watch?v=KgUafDoUcWU",
+    referer: "https://www.youtube.com/watch?v=KgUafDoUcWU",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams15",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "San Bernardino Mtns LIVE Webcam",
+    url: "https://www.youtube.com/watch?v=VXMe-WsgZFs",
+    referer: "https://www.youtube.com/watch?v=VXMe-WsgZFs",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams16",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "San Bernardino Mtns Cam 2",
+    url: "https://www.youtube.com/watch?v=XwIJJru_FjU",
+    referer: "https://www.youtube.com/watch?v=XwIJJru_FjU",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams17",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Big Bear Bald Eagle Live Cam 1",
+    url: "https://www.youtube.com/watch?v=B4-L2nfGcuE",
+    referer: "https://www.youtube.com/watch?v=B4-L2nfGcuE",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams18",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Big Bear Bald Eagle Live Cam 2",
+    url: "https://www.youtube.com/watch?v=LCGYWfbyBWc",
+    referer: "https://www.youtube.com/watch?v=LCGYWfbyBWc",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams19",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Snow Summit Beginner Area Cam",
+    url: "https://youtu.be/Kn4IAs67hNo",
+    referer: "https://youtu.be/Kn4IAs67hNo",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams20",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Snow Summit Miracle Mile Cam",
+    url: "https://youtu.be/1sa8cuSm7dk",
+    referer: "https://youtu.be/1sa8cuSm7dk",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams21",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Snow Summit Slopeside Cam",
+    url: "https://youtu.be/SOo3NBmvJQI",
+    referer: "https://youtu.be/SOo3NBmvJQI",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams22",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Snow Summit's Westridge Cam",
+    url: "https://youtu.be/6kEwfEfviig",
+    referer: "https://youtu.be/6kEwfEfviig",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams23",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Bear Midway Chair 5",
+    url: "https://youtu.be/xnZH7wUCsPU",
+    referer: "https://youtu.be/xnZH7wUCsPU",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams24",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Bear Mountain Beginner Area Cam",
+    url: "https://youtu.be/8sqJuzwxXeY",
+    referer: "https://youtu.be/8sqJuzwxXeY",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams25",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Bear Base Cam",
+    url: "https://youtu.be/f_OUEF4csuo",
+    referer: "https://youtu.be/f_OUEF4csuo",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams26",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Bear Peak Cam",
+    url: "https://youtu.be/kydMumfVS5o",
+    referer: "https://youtu.be/kydMumfVS5o",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams27",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Snow Valley's Base Area",
+    url: "https://youtu.be/RBYyWnu8nhM",
+    referer: "https://youtu.be/RBYyWnu8nhM",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams28",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Snow Valley Peak Camera",
+    url: "https://youtu.be/1GyTQP4SNDk",
+    referer: "https://youtu.be/1GyTQP4SNDk",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams29",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood Borderline Cam",
+    url: "https://youtu.be/59H5tZRUn3Q",
+    referer: "https://youtu.be/59H5tZRUn3Q",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams30",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood West Base Cam",
+    url: "https://youtu.be/wthWujBgyGo",
+    referer: "https://youtu.be/wthWujBgyGo",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams31",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood Playground Cam",
+    url: "https://youtu.be/EXwR6UQrYNY",
+    referer: "https://youtu.be/EXwR6UQrYNY",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams32",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood WSC Bullwheel",
+    url: "https://youtu.be/quXem3ocJJg",
+    referer: "https://youtu.be/quXem3ocJJg",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams33",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood Yeti's Snowplay",
+    url: "https://youtu.be/dC8yeB98l3Y",
+    referer: "https://youtu.be/dC8yeB98l3Y",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams34",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood East Summit",
+    url: "https://youtu.be/NoLcR2_9eXk",
+    referer: "https://youtu.be/NoLcR2_9eXk",
+    origin: "",
+    length: "0",
+    helo: ""
+  }, {
+  id: "MtCams35",
+    dynamic: "false",
+    city: "MtCams",
+    net: "webcam",
+    call: "Mountain Cam",
+    station: "Wrightwood North Lodge Cam",
+    url: "https://youtu.be/L5ccdoi8a8Y",
+    referer: "https://youtu.be/L5ccdoi8a8Y",
+    origin: "",
+    length: "0",
+    helo: ""
 }];
+
 
 
 </script>
 </body>
 </html>
+
+ 
