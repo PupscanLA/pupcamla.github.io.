@@ -294,6 +294,59 @@ body {
   margin-top: 10px;
   font-weight: 700;
 }
+body.dark-mode {
+    background: #1e1d1d;
+    color: #E0E0E0;
+}
+#top.dark-mode {
+    background: #1e1d1d;
+}
+#main.dark-mode {
+    background: #1e1d1d;
+}
+#left.dark-mode {
+    background: #1e1d1d;
+}
+#right.dark-mode {
+    background: #1e1d1d !important;
+}
+.marketDiv.dark-mode {
+    background-color: #5e5d5b !important;
+}
+.marketOdd.dark-mode {
+    background-color: #2a2929 !important;
+  }
+.hdrTitle.dark-mode, .marketHeader.dark-mode, .hdrWest.dark-mode, .hdrMidwest.dark-mode, .hdrEast.dark-mode, .hdrNational.dark-mode, .hdrWebcam.dark-mode, .hdrYoutube.dark-mode, .clock.dark-mode {
+    color: #E0E0E0;
+  }
+body.dark-mode .chanLoading {
+    background-color: #121212 !important;  /* Dark background */
+    color: #ccc !important;  /* Light text color */
+}
+
+body.dark-mode .chanPlaying {
+    background-color: #1e1d1d !important;
+    color: white !important;  /* Optional: Ensure text is visible */
+}
+.hdrWest.dark-mode, .hdrMidwest.dark-mode, .hdrEast.dark-mode, .hdrNational.dark-mode, .hdrWebcam.dark-mode, .hdrYoutube.dark-mode {
+    background: #1e1d1d;
+}
+#row1.dark-mode, #row2.dark-mode {
+    background: #333;
+    border-bottom: 1px solid #555;
+    color: #E0E0E0;
+}
+#resText.dark-mode {
+    background: #333;
+    border: 1px solid #555;
+    color: #E0E0E0;
+}
+.enabledHeader.dark-mode{
+	background-color: #333;
+}
+.disabledHeader.dark-mode{
+	background-color: #555;
+}
 </style>
 <!--script src="./jquery.min.js"></script-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -319,6 +372,7 @@ body {
 				<button id="hideBtn" class="flatBtn">Hide</button>
 				<button id="closeBtn" class="flatBtn">Close</button>
 				<button id="snap" class="flatBtn">Snap</button>
+      <button id="darkModeButton" class="flatBtn">Dark Mode</button>
 			</span>
 		</div>
 	</div>
@@ -25389,4 +25443,36 @@ let items = [{
 </body>
 </html>
 
- 
+
+<script>
+  $(document).ready(function () {
+      const DARK_MODE_KEY = 'darkMode';
+  
+      // Function to toggle dark mode
+      function toggleDarkMode(apply) {
+          const elements = $('body, #top, #main, #left, #right, .marketDiv, .marketOdd, .hdrTitle, .marketHeader, .chanLoading, .chanPlaying, .hdrWest, .hdrMidwest, .hdrEast, .hdrNational, .hdrWebcam, .hdrYoutube, .clock, #row1, #row2, #resText, .enabledHeader, .disabledHeader');
+  
+          if (apply) {
+              elements.addClass('dark-mode');
+              $('#darkModeButton').text('Light Mode');
+              localStorage.setItem(DARK_MODE_KEY, 'true');
+          } else {
+              elements.removeClass('dark-mode');
+              $('#darkModeButton').text('Dark Mode');
+              localStorage.setItem(DARK_MODE_KEY, 'false');
+          }
+      }
+  
+      // Apply saved preference on load
+      const savedPreference = localStorage.getItem(DARK_MODE_KEY) === 'true';
+      toggleDarkMode(savedPreference);
+  
+      // Handle button click
+      $('#darkModeButton').click(function () {
+          const isDarkMode = $('body').hasClass('dark-mode');
+          toggleDarkMode(!isDarkMode);
+      });
+  });
+  </script>
+  </body>
+  </html>
