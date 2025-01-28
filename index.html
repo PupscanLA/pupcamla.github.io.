@@ -372,6 +372,8 @@ body.dark-mode .chanPlaying {
 				<button id="hideBtn" class="flatBtn">Hide</button>
 				<button id="closeBtn" class="flatBtn">Close</button>
 				<button id="snap" class="flatBtn">Snap</button>
+  </body>
+  </html>
       <button id="darkModeButton" class="flatBtn">Dark Mode</button>
 			</span>
 		</div>
@@ -538,7 +540,7 @@ body.dark-mode .chanPlaying {
 			</div>
 		</div>
 	</span>
-</div>
+</div> 
 
 		<span id="right">
 			<div id="video-container" style="max-width:800px;"></div>
@@ -546,6 +548,12 @@ body.dark-mode .chanPlaying {
 				<button id="copyBtn" class="flatBtn">Copy</button>
 				<button id="clearBtn" class="flatBtn">Clear</button>
 				<button id="playBtn" class="flatBtn">Play</button>
+        <button id="multiviewer" class="flatBtn">Multiviewer</button>
+        <script>
+          document.getElementById('multiviewer').addEventListener('click', function() {
+              window.location.href = 'file:///C:/Users/Com3t/Desktop/multiviewer.html'; // Replace with the desired URL
+          });
+      </script>
 				
 				<span id="callSign" data-call=""></span>
 				<span class="muteLbl">Start Muted</span>
@@ -24340,6 +24348,18 @@ let items = [{
     length: "0",
     helo: ""
   }, {
+    id: "Rosamond Cam",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Rosamond",
+    station: "Rosamond Skypark Runway Live",
+    url: "https://www.youtube.com/watch?v=F-PNkAWz2IQ",
+    referer: "https://www.youtube.com/watch?v=F-PNkAWz2IQ",
+    origin: "https://www.youtube.com/watch?v=F-PNkAWz2IQ",
+    length: "0",
+    helo: ""
+  }, {
     id: "Torrance",
     dynamic: "false",
     city: "webcam",
@@ -24349,6 +24369,18 @@ let items = [{
     url: "https://b10.hdrelay.com/camera/dc4b3a44-1951-49a9-bc28-9e2efca851fa/relay/chunklist_w1719231910.m3u8",
     referer: "",
     origin: "",
+    length: "0",
+    helo: ""
+  }, {
+    id: "Big Bear",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Big Bear",
+    station: "Big Bear Airport",
+    url: "https://edge01.nginx.hdontap.com/hosb3/bbad_ptz.stream/chunklist.m3u8",
+    referer: "https://hdontap.com/stream/258798/big-bear-city-airport/",
+    origin: "https://hdontap.com/stream/258798/big-bear-city-airport/",
     length: "0",
     helo: ""
   }, {
@@ -24371,8 +24403,20 @@ let items = [{
     call: "Lake Forest",
     station: "Etnies Skate Park",
     url: "https://edge02.nginx.hdontap.com/hosb5/etniesskatepark_clf.stream/chunklist.m3u8",
-    referer: "",
-    origin: "",
+    referer: "https://hdontap.com/stream/883062/etnies-skate-park-lake-forest-california/",
+    origin: "https://hdontap.com/stream/883062/etnies-skate-park-lake-forest-california/",
+    length: "0",
+    helo: ""
+  }, {
+    id: "Hemet",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "Hemet",
+    station: "Hemet Skate Park",
+    url: "https://edge01.nginx.hdontap.com/hosb3/coh_skate-park_ptz.stream/chunklist.m3u8",
+    referer: "https://hdontap.com/stream/378106/hemet-california-skate-park/",
+    origin: "https://hdontap.com/stream/378106/hemet-california-skate-park/",
     length: "0",
     helo: ""
   }, {
@@ -24383,8 +24427,8 @@ let items = [{
     call: "knotts",
     station: "Boardwalk / HangTime",
     url: "https://cs4.pixelcaster.com/live/knotts2.stream/chunks.m3u8",
-    referer: "",
-    origin: "",
+    referer: "https://www.knotts.com/live-video",
+    origin: "https://www.knotts.com/live-video",
     length: "0",
     helo: ""
   }, {
@@ -24395,8 +24439,8 @@ let items = [{
     call: "knotts",
     station: "Calico Mine Ride",
     url: "https://cs4.pixelcaster.com/live/knotts1.stream/chunks.m3u8",
-    referer: "",
-    origin: "",
+    referer: "https://www.knotts.com/live-video",
+    origin: "https://www.knotts.com/live-video",
     length: "0",
     helo: ""
   }, {
@@ -24407,8 +24451,20 @@ let items = [{
     call: "knotts",
     station: "Knott's Soak City",
     url: "https://cs4.pixelcaster.com/live/knotts3.stream/chunks.m3u8",
-    referer: "",
-    origin: "",
+    referer: "https://www.knotts.com/live-video",
+    origin: "https://www.knotts.com/live-video",
+    length: "0",
+    helo: ""
+  }, {
+    id: "OC Fair",
+    dynamic: "false",
+    city: "webcam",
+    net: "webcam",
+    call: "OC Fair",
+    station: "Pig Cam",
+    url: "https://oc-fair.vdn.terrafox.net/oc-fair/pig-1/chunks.m3u8",
+    referer: "https://ocfair.com/centennial-farm/pig-cam",
+    origin: "https://ocfair.com/centennial-farm/pig-cam",
     length: "0",
     helo: ""
   }, {
